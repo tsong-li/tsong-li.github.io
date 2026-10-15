@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Newsflow is Tsong Li&#x27;s personal project, inspired by earlier Copilot Daily work. It combines Read, Digest, Listen, and Watch in a working online prototype.">
+  <title>Newsflow: Tsong Li Portfolio - V1</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+  </style>
+  <script src="/language-init.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/translations.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Tsong Li, home">Tsong Li<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/resume.html">Resume</a><a href="/#contact">Contact</a></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-breadcrumb"><a class="case-return" href="/#copilot-content-finance"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">Personal project · Multimodal news</span></div>
+      <h1 id="case-title">Newsflow: news for the moment you have<span class="accent-text">.</span></h1>
+      <p class="case-principle">People can read, listen to, or watch a story, or catch up through a quick digest, depending on the time and attention they have.</p>
+      <dl class="case-facts" aria-label="At a glance">
+        <div><dt>Context</dt><dd>Personal project inspired by earlier Copilot Daily work</dd></div>
+        <div><dt>My role</dt><dd>Product design, AI-assisted front-end and backend implementation, service integration, testing, and deployment</dd></div>
+        <div><dt>Experience</dt><dd>Article reading, Digest, Listen, and Watch</dd></div>
+        <div><dt>Delivery</dt><dd>Working prototype available online</dd></div>
+      </dl>
+    </section>
+
+    <figure class="newsflow-hero-figure">
+      <img src="/assets/newsflow-interface-1600.webp" srcset="/assets/newsflow-interface-800.webp 800w, /assets/newsflow-interface-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px" width="1920" height="1080" decoding="async" alt="Newsflow screenshot showing a central news article, an AI Digest with key points and context, and a Newsflow Radio panel with listening-time choices and playback controls.">
+      <a class="case-image-link" href="/assets/newsflow-interface.png">View full-size interface image</a>
+      <figcaption>Newsflow: article reading, Digest, and listening-time controls.</figcaption>
+    </figure>
+
+    <div class="case-story">
+      <aside class="case-contents">
+        <p class="eyebrow">In this case</p>
+        <nav aria-label="Case contents">
+          <a href="#context">01 / A mismatch of content and moment</a>
+          <a href="#formats">02 / One story, different ways in</a>
+          <a href="#time-budget">03 / Fit a queue to the time available</a>
+          <a href="#voice">04 / Designing the listening experience</a>
+          <a href="#building">05 / From concept to working system</a>
+          <a href="#delivery">06 / What I took forward</a>
+        </nav>
+      </aside>
+      <div class="story-sections">
+        <section id="context" class="story-section">
+          <p class="eyebrow">01 / A mismatch of content and moment</p>
+          <h2>We don’t lack content.<br>We lack the right way to consume it.</h2>
+          <p>News is abundant, but a screen-based feed does not always suit the time or attention people have. They may want to read in depth at a desk, catch the essentials between tasks, or listen away from a screen.</p>
+          <p>Inspired by my earlier Copilot Daily work, I started Newsflow as a personal project to explore different ways to follow MSN News content. I wanted to see how the same story could fit different moments in someone's day, without simply adding more stories.</p>
+        </section>
+
+        <section id="formats" class="story-section">
+          <p class="eyebrow">02 / One story, different ways in</p>
+          <h2>Let people choose how much attention to give.</h2>
+          <p>Newsflow offers several ways to engage with a story, beyond reading. People can open the article and visit its original publisher, or use Digest for a quick overview when time is short.</p>
+          <dl class="format-directions">
+            <div><dt>Read</dt><dd>Read the article and keep access to its original publisher.</dd></div>
+            <div><dt>Digest</dt><dd>Get a quick overview of the story when you have only a moment.</dd></div>
+            <div><dt>Listen</dt><dd>Build a queue, skip between items, pause playback, and choose how much time to spend listening.</dd></div>
+            <div><dt>Watch</dt><dd>Show an existing video when one is available; otherwise, tell the story through images and narration.</dd></div>
+          </dl>
+          <p>People could choose how to follow a story as their day changed: spend time reading it, switch to a shorter format, or use a more hands-free option. There was no fixed sequence to follow.</p>
+          <div class="newsflow-screen-grid">
+            <figure class="newsflow-screen">
+              <img src="/assets/newsflow-read-1600.webp" srcset="/assets/newsflow-read-800.webp 800w, /assets/newsflow-read-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(50vw - 44px), (max-width: 1100px) calc(50vw - 162px), (max-width: 1264px) calc(50vw - 236px), 396px" width="3456" height="2168" loading="lazy" decoding="async" alt="Newsflow Read screen showing an article, its publisher, and actions for Listen, Watch, Digest, and Original.">
+              <figcaption>Read: article, publisher, and related actions.</figcaption>
+              <a class="newsflow-image-link" href="/assets/newsflow-read.png">View full-size Read screen</a>
+            </figure>
+            <figure class="newsflow-screen">
+              <img src="/assets/newsflow-digest-1600.webp" srcset="/assets/newsflow-digest-800.webp 800w, /assets/newsflow-digest-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(50vw - 44px), (max-width: 1100px) calc(50vw - 162px), (max-width: 1264px) calc(50vw - 236px), 396px" width="3456" height="2168" loading="lazy" decoding="async" alt="Newsflow AI Digest screen showing a summary with key points and context.">
+              <figcaption>Digest: key points and context.</figcaption>
+              <a class="newsflow-image-link" href="/assets/newsflow-digest.png">View full-size Digest screen</a>
+            </figure>
+          </div>
+        </section>
+
+        <section id="time-budget" class="story-section">
+          <p class="eyebrow">03 / Fit a queue to the time available</p>
+          <h2>Choose a listening window; let the playlist meet it.</h2>
+          <p>I implemented a listening-time option in the online prototype. People choose a duration, and Newsflow adjusts the playlist and narration length to fit it. They can plan around the time they have, instead of assembling a queue without knowing how long it will take.</p>
+          <figure class="newsflow-screen newsflow-wide-screen">
+            <img src="/assets/newsflow-listen-1600.webp" srcset="/assets/newsflow-listen-800.webp 800w, /assets/newsflow-listen-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px" width="3456" height="2168" loading="lazy" decoding="async" alt="Newsflow Listen screen showing a radio queue, listening-time choices, and playback controls.">
+            <figcaption>Listen: queue, time choices, and playback controls.</figcaption>
+            <a class="newsflow-image-link" href="/assets/newsflow-listen.png">View full-size Listen screen</a>
+          </figure>
+        </section>
+
+        <section id="voice" class="story-section">
+          <p class="eyebrow">04 / Designing the listening experience</p>
+          <h2>Make audio feel arranged, not queued at random.</h2>
+          <p>Tone, timing, and transitions between stories can turn a queue of articles read aloud into a coherent, well-organized show.</p>
+          <p>I adapted the narration differently for Listen and Watch. Listen needed a steady spoken flow; Watch needed narration that worked with the visual scenes. Even for the same story, the wording and pace changed with the format.</p>
+          <p>Deciding what to emphasize, where to pause, and how to move between stories still requires design judgment.</p>
+          <figure class="newsflow-screen newsflow-wide-screen">
+            <img src="/assets/newsflow-watch-1600.webp" srcset="/assets/newsflow-watch-800.webp 800w, /assets/newsflow-watch-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px" width="3456" height="2168" loading="lazy" decoding="async" alt="Newsflow Watch screen showing a narrated visual story with chapter markers and playback controls.">
+            <figcaption>Watch: narrated scenes and chapter controls.</figcaption>
+            <a class="newsflow-image-link" href="/assets/newsflow-watch.png">View full-size Watch screen</a>
+          </figure>
+        </section>
+
+        <section id="building" class="story-section">
+          <p class="eyebrow">05 / From concept to working system</p>
+          <h2>I moved from describing the idea to testing it in use.</h2>
+          <p>I conceived and designed the experience, then built it and integrated news fetching and text-to-speech services. I used VS Code Copilot throughout, refining the content, pacing, and interactions through hands-on testing and debugging.</p>
+          <p>Integrating real services meant designing for failures too. I added fallback routes so people would still have a usable next step when a service was unavailable.</p>
+          <p>I implemented the front-end flows and backend service integrations, then debugged the text-to-speech API in the deployed environment. Working through those issues extended what I could deliver as a designer, from interaction concepts to a working online prototype.</p>
+          <p>Building a working prototype mattered to me because I could experience and revise the pacing, transitions, and content choices directly.</p>
+        </section>
+
+        <section id="delivery" class="story-section outcome-section">
+          <p class="eyebrow">06 / What I took forward</p>
+          <h2>AI helped make the idea testable; judgment gave it shape.</h2>
+          <p>Newsflow is a personal online prototype, not an official Microsoft or MSN product. Building it let me work through the full experience, from finding stories and shaping narration to testing how the formats worked together.</p>
+          <p>The work reinforced my view that each medium needs its own design. Listening to a story calls for a different rhythm from reading or watching it. Tools help build the experience; deciding whether it is clear and coherent still takes human judgment.</p>
+          <p>The direction received positive feedback from internal content and design teams.</p>
+          <p><a class="text-link" href="https://tsong-li.github.io/newsflow/" target="_blank" rel="noopener noreferrer">Open the online prototype <span class="sr-only"> (opens in a new tab)</span></a></p>
+          <p><a class="text-link" href="https://github.com/tsong-li/newsflow" target="_blank" rel="noopener noreferrer">View the source code on GitHub <span class="sr-only"> (opens in a new tab)</span></a></p>
+        </section>
+      </div>
+    </div>
+    <div class="case-closing"><a class="text-link case-return" href="/#newsflow"><span class="case-return-arrow" aria-hidden="true">←</span><span>Back to selected work</span></a><a href="/work/discover-finance.html">Next case / Discover Finance</a></div>
+  </main>
+  <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Newsflow</span><span>Personal project · Local portfolio case</span><a href="#main">Back to top</a></footer>
+</body>
+</html>

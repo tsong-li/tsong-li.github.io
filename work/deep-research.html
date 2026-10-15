@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tsong Li led design for four shipped Copilot Deep Research report enhancements, including a sharing experience that shows what is included with a report.">
+  <title>Copilot Deep Research: Tsong Li Portfolio - V1</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+  </style>
+  <script src="/language-init.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/translations.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Tsong Li, home">Tsong Li<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/resume.html">Resume</a><a href="/#contact">Contact</a></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-breadcrumb"><a class="case-return" href="/#copilot-core"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">Report clarity &amp; sharing scope</span></div>
+      <h1 id="case-title">Copilot Deep Research: reports made easier to share<span class="accent-text">.</span></h1>
+      <p class="case-principle">Four shipped enhancements to how research reports are presented and shared.</p>
+      <dl class="case-facts" aria-label="At a glance">
+        <div><dt>Product</dt><dd>Microsoft Copilot<br>Deep Research</dd></div>
+        <div><dt>Contribution</dt><dd>Design lead for four report-experience enhancements</dd></div>
+        <div><dt>Scope</dt><dd>Charts, the Copilot Web Report Card, web and mobile sharing, and the Promotion Card for launch</dd></div>
+        <div><dt>Delivery</dt><dd>All four enhancements shipped</dd></div>
+      </dl>
+    </section>
+
+    <figure class="deep-research-figure deep-research-overview">
+      <picture>
+        <source type="image/webp" srcset="/assets/deep-research-overview-800.webp 800w, /assets/deep-research-overview-1600.webp 1600w, /assets/deep-research-overview-2400.webp 2400w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px">
+        <img src="/assets/deep-research-overview.png" width="3840" height="2160" loading="lazy" decoding="async" alt="Desktop Deep Research report with a chart and a mobile report-share preview; the rainfall example is illustrative.">
+      </picture>
+      <figcaption>A desktop report with a chart sits alongside a mobile sharing preview. The rainfall example is illustrative.</figcaption>
+      <a class="case-image-link" href="/assets/deep-research-overview.png" target="_blank" rel="noopener noreferrer">View full-size Deep Research design <span class="sr-only">(opens in a new tab)</span></a>
+    </figure>
+
+    <div class="case-story">
+      <aside class="case-contents">
+        <p class="eyebrow">In this case</p>
+        <nav aria-label="Case contents">
+          <a href="#overview">01 / Overview &amp; contribution</a>
+          <a href="#enhancements">02 / Four report enhancements</a>
+          <a href="#scope">03 / What should a share include?</a>
+          <a href="#contexts">04 / Sharing from two places</a>
+          <a href="#delivery">05 / Delivery</a>
+          <a href="#takeaway">06 / Design takeaway</a>
+        </nav>
+      </aside>
+      <div class="story-sections">
+        <section id="overview" class="story-section">
+          <p class="eyebrow">01 / Overview &amp; contribution</p>
+          <h2>Four details that shape how a report is read and shared.</h2>
+          <p>People needed to read and share the reports generated by Deep Research. My work covered four parts of that experience: charts within reports, report cards in Copilot Web, redesigned sharing on mobile and web, and the Promotion Card for the feature launch.</p>
+          <p>I led design for these report-experience enhancements as part of the wider Deep Research team.</p>
+        </section>
+
+        <section id="enhancements" class="story-section">
+          <p class="eyebrow">02 / Four enhancements</p>
+          <h2>Four ways to strengthen the report experience.</h2>
+          <dl class="format-directions">
+            <div><dt>Charts<br> in reports</dt><dd>Charts added another way to present information within the report.</dd></div>
+            <div><dt>Copilot Web<br> Report Card</dt><dd>I designed how generated reports appear as cards in Copilot Web.</dd></div>
+            <div><dt>Sharing<br> on web and mobile</dt><dd>I redesigned sharing to clarify what would be included with the report.</dd></div>
+          </dl>
+          <figure class="deep-research-figure deep-research-enhancements-figure">
+            <picture>
+              <source type="image/webp" srcset="/assets/deep-research-mobile-enhancements-800.webp 800w, /assets/deep-research-mobile-enhancements-1600.webp 1600w, /assets/deep-research-mobile-enhancements-2400.webp 2400w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px">
+              <img src="/assets/deep-research-mobile-enhancements.png" width="3840" height="2160" loading="lazy" decoding="async" alt="Four mobile Deep Research views: a report card in a conversation, a full report with a chart, an iOS share preview, and Android sharing destinations. The sample rainfall report is illustrative.">
+            </picture>
+            <figcaption>From left to right: a report card in conversation, a full report with a chart, then iOS and Android sharing views. The sample rainfall content is illustrative.</figcaption>
+            <a class="case-image-link" href="/assets/deep-research-mobile-enhancements.png" target="_blank" rel="noopener noreferrer">View full-size mobile Deep Research designs <span class="sr-only">(opens in a new tab)</span></a>
+          </figure>
+          <dl class="format-directions">
+            <div><dt>Launch<br> Promotion Card</dt><dd>I designed the Promotion Card that accompanied the feature launch.</dd></div>
+          </dl>
+          <figure class="deep-research-figure deep-research-enhancements-figure">
+            <picture>
+              <source type="image/webp" srcset="/assets/deep-research-promotion-card-800.webp 800w, /assets/deep-research-promotion-card-1600.webp 1600w, /assets/deep-research-promotion-card-2400.webp 2400w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px">
+              <img src="/assets/deep-research-promotion-card.png" width="3840" height="2160" loading="lazy" decoding="async" alt="Four prepared Promotion Card variants: English left-to-right and Arabic right-to-left layouts, each in light and dark appearance. Text alignment and overlapping report and document illustrations are composed for each reading direction.">
+            </picture>
+            <figcaption>The four prepared variants cover English left-to-right and Arabic right-to-left layouts, each in light and dark appearances. Text alignment and the overlapping report and document illustrations follow each reading direction.</figcaption>
+            <a class="case-image-link" href="/assets/deep-research-promotion-card.png" target="_blank" rel="noopener noreferrer">View full-size Promotion Card designs <span class="sr-only">(opens in a new tab)</span></a>
+          </figure>
+        </section>
+
+        <section id="scope" class="story-section">
+          <p class="eyebrow">03 / The sharing decision</p>
+          <h2>Show people what will travel with the report.</h2>
+          <p>Before the redesign, there was no sharing preview. People could not tell whether they would share the report or the entire conversation. This mattered because the conversation could include unrelated or sensitive discussion.</p>
+          <p>I wanted people to see what they were about to share. The starting point could determine how much context to include: sharing from a conversation could include the prompt that led to the report, while sharing from the report itself could include only a link to the report.</p>
+        </section>
+
+        <section id="contexts" class="story-section">
+          <p class="eyebrow">04 / Two sharing contexts</p>
+          <h2>Where you start shapes what you share.</h2>
+          <dl class="format-directions">
+            <div><dt>From<br> the conversation</dt><dd>Sharing from the conversation opens a preview of the prompt that triggered the report and the report itself. Only these two items are shared; the rest of the conversation is excluded. The prompt gives the recipient context for understanding the report.</dd></div>
+            <div><dt>From<br> the report detail page</dt><dd>From the report detail page, a share contains only a link to the report content, without the prompt or any added conversation context.</dd></div>
+          </dl>
+          <p>Conversation shares include the prompt; report-detail shares include only a report link.</p>
+        </section>
+
+        <section id="delivery" class="story-section">
+          <p class="eyebrow">05 / Delivery &amp; outcome</p>
+          <h2>All four enhancements shipped.</h2>
+          <p>The shipped work included charts in reports, the Copilot Web Report Card, redesigned sharing on web and mobile, and the launch Promotion Card.</p>
+          <p>The sharing design aimed to show people exactly what they would share and give recipients enough context to understand the report.</p>
+        </section>
+
+        <section id="takeaway" class="story-section outcome-section">
+          <p class="eyebrow">06 / Design takeaway</p>
+          <h2>Make the boundary part of the share.</h2>
+          <p>Sharing involves both a destination and the content the recipient will see. Showing the included content before it leaves the conversation helps the sender understand the scope.</p>
+          <p>The conversation preview paired the prompt with its report; sharing from the report detail page included only a report link. The design made the different amounts of context clear at each starting point.</p>
+        </section>
+      </div>
+    </div>
+    <div class="case-closing"><a class="text-link case-return" href="/#deep-research"><span class="case-return-arrow" aria-hidden="true">←</span><span>Back to selected work</span></a><a href="/work/think-deeper.html">Next case / Think Deeper</a></div>
+  </main>
+  <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Deep Research</span><span>Microsoft Copilot · Case study</span><a href="#main">Back to top</a></footer>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Tsong Li helped bring internationalization into Lark&#x27;s design process through multilingual standards, a collaboratively developed translation tool, font checks, and a shared handoff process.">
+  <title>Lark internationalization: Tsong Li Portfolio - V1</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+  </style>
+  <script src="/language-init.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/translations.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Tsong Li, home">Tsong Li<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/resume.html">Resume</a><a href="/#contact">Contact</a></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-breadcrumb"><a class="case-return" href="/#earlier-work"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">Lark · 2022–2023</span></div>
+      <h1 id="case-title">Lark: make internationalization part of everyday design delivery<span class="accent-text">.</span></h1>
+      <p class="case-principle">A multilingual experience depends on translation, layout, typography, platform behavior, and how teams hand off the work.</p>
+      <dl class="case-facts" aria-label="At a glance">
+        <div><dt>Product</dt><dd>Lark collaboration suite</dd></div>
+        <div><dt>My role</dt><dd>Multilingual standards and workflow design</dd></div>
+        <div><dt>Collaboration</dt><dd>Engineering, R&amp;D, and content teams</dd></div>
+        <div><dt>Focus</dt><dd>Design rules, translation-tool behavior, and verification</dd></div>
+      </dl>
+    </section>
+
+    <div class="case-story">
+      <aside class="case-contents">
+        <p class="eyebrow">In this case</p>
+        <nav aria-label="Case contents">
+          <a href="#problem">01 / More than translation</a>
+          <a href="#standards">02 / Make language behavior explicit</a>
+          <a href="#workflow">03 / Put checks in the workflow</a>
+          <a href="#verification">04 / Verify what ships</a>
+        </nav>
+      </aside>
+      <div class="story-sections">
+        <section id="problem" class="story-section">
+          <p class="eyebrow">01 / More than translation</p>
+          <h2>Every language brings its own layout questions.</h2>
+          <p>In a multilingual collaboration product, translated text can change line breaks, text length, font weight, and component rendering across platforms. Even an accurate translation can leave a screen cramped or inconsistent.</p>
+          <p>Designers, content partners, and engineers also needed to agree on release checks and multilingual file handoff. I led that collaboration to clarify the rules and each team's responsibilities.</p>
+          <figure class="lark-evidence-figure">
+            <picture>
+              <source type="image/webp" srcset="/assets/lark-project-examples-1600.webp 1600w, /assets/lark-project-examples-2400.webp 2400w, /assets/lark-project-examples-3200.webp 3200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px">
+              <img src="/assets/lark-project-examples.png" width="3442" height="1838" loading="lazy" decoding="async" alt="Lark Project internationalization case board showing English and Chinese team invitations, mobile invitation views, Academy and pricing pages, and multilingual settings.">
+            </picture>
+            <figcaption>Selected Lark Project design examples spanning team invitations, pricing, the Academy website, and multilingual settings.</figcaption>
+          </figure>
+        </section>
+
+        <section id="standards" class="story-section">
+          <p class="eyebrow">02 / Make language behavior explicit</p>
+          <h2>Turn edge cases into design guidance teams can reuse.</h2>
+          <p>I helped define standards for word boundaries, line breaks, overflow, font behavior, platform rendering, and component adaptation. We wanted multilingual behavior specified during design, before translated text was placed for a final visual check.</p>
+          <p>These rules tied language choices to layout and typography, helping teams check whether a screen would remain readable after translation.</p>
+          <figure class="lark-evidence-figure">
+            <picture>
+              <source type="image/webp" srcset="/assets/lark-multilingual-guideline-1600.webp 1600w, /assets/lark-multilingual-guideline-2400.webp 2400w, /assets/lark-multilingual-guideline-3200.webp 3200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px">
+              <img src="/assets/lark-multilingual-guideline.png" width="3440" height="1834" loading="lazy" decoding="async" alt="Lark multilingual design guideline and supporting board of interface, typography, line-break, and localization examples.">
+            </picture>
+            <figcaption>The guideline sits alongside working examples for multilingual copy, layout, and typography.</figcaption>
+          </figure>
+        </section>
+
+        <section id="workflow" class="story-section">
+          <p class="eyebrow">03 / Put checks in the workflow</p>
+          <h2>Make the right work easier to repeat.</h2>
+          <p>I defined how a Figma translation tool would retrieve translations, compare UX copy, adjust font weights, and assign font tokens. I led its development with R&amp;D and content partners.</p>
+          <p>We included the tool in the handoff SOP so the checks became part of the team's delivery process. Translation, typography, and implementation guidance could then accompany the work in one place.</p>
+          <dl class="format-directions">
+            <div><dt>Translation content</dt><dd>Retrieve and compare the language content used in the design.</dd></div>
+            <div><dt>Typography</dt><dd>Check font weight and apply the appropriate font tokens.</dd></div>
+            <div><dt>Handoff</dt><dd>Include multilingual requirements in the shared design-to-engineering handoff.</dd></div>
+          </dl>
+          <figure class="lark-evidence-figure">
+            <picture>
+              <source type="image/webp" srcset="/assets/lark-handoff-tooling-1600.webp 1600w, /assets/lark-handoff-tooling-2400.webp 2400w, /assets/lark-handoff-tooling-3200.webp 3200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px">
+              <img src="/assets/lark-handoff-tooling.png" width="3438" height="1846" loading="lazy" decoding="async" alt="Lark design handoff SOP and Figma translation-tool documentation, with examples of translation content and tool interfaces.">
+            </picture>
+            <figcaption>Handoff guidance and translation-tool examples documented together.</figcaption>
+          </figure>
+        </section>
+
+        <section id="verification" class="story-section outcome-section">
+          <p class="eyebrow">04 / Verify what ships</p>
+          <h2>Make font behavior and open issues visible.</h2>
+          <p>I defined cross-platform font-replacement checks using distinctive characters, along with ways to collect and track open internationalization issues. Teams could use the same rendering checks and follow unresolved issues across product work.</p>
+          <p>We applied these rules to Lark Project's Chinese, English, and Japanese font scheme. Browser fallbacks and variable fonts helped keep typography balanced across platforms.</p>
+          <p>Standards, translation-tool behavior, handoff, and verification became part of the regular design-delivery process.</p>
+          <figure class="lark-evidence-figure">
+            <picture>
+              <source type="image/webp" srcset="/assets/lark-i18n-issue-tracking-1600.webp 1600w, /assets/lark-i18n-issue-tracking-2400.webp 2400w, /assets/lark-i18n-issue-tracking-3200.webp 3200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px">
+              <img src="/assets/lark-i18n-issue-tracking.png" width="3440" height="1838" loading="lazy" decoding="async" alt="Lark internationalization status report, feedback-triage guide, and related issue-tracking views.">
+            </picture>
+            <figcaption>Reporting and feedback-triage materials for monitoring internationalization issues.</figcaption>
+          </figure>
+          <figure class="lark-evidence-figure">
+            <picture>
+              <source type="image/webp" srcset="/assets/lark-multilingual-font-scheme-1600.webp 1600w, /assets/lark-multilingual-font-scheme-2400.webp 2400w, /assets/lark-multilingual-font-scheme-3200.webp 3200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px">
+              <img src="/assets/lark-multilingual-font-scheme.png" width="3442" height="1843" loading="lazy" decoding="async" alt="Lark multilingual font scheme showing Chinese, English, and Japanese font and typography comparisons.">
+            </picture>
+            <figcaption>Cross-platform font specifications and samples for Chinese, English, and Japanese.</figcaption>
+          </figure>
+          <figure class="lark-evidence-figure">
+            <picture>
+              <source type="image/webp" srcset="/assets/lark-font-validation-1600.webp 1600w, /assets/lark-font-validation-2400.webp 2400w, /assets/lark-font-validation-3200.webp 3200w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px">
+              <img src="/assets/lark-font-validation.png" width="3440" height="1848" loading="lazy" decoding="async" alt="Lark font-replacement validation notes with multilingual character samples, rendered-font comparisons, and platform checks.">
+            </picture>
+            <figcaption>Feature-character and rendering checks used to verify font replacement.</figcaption>
+          </figure>
+        </section>
+      </div>
+    </div>
+    <div class="case-closing"><a class="text-link case-return" href="/#lark-internationalization"><span class="case-return-arrow" aria-hidden="true">←</span><span>Back to selected work</span></a><a href="/work/weishi-7.html">Next case / Wesee 7.0</a></div>
+  </main>
+  <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Lark internationalization</span><span>ByteDance · Case study</span><a href="#main">Back to top</a></footer>
+</body>
+</html>

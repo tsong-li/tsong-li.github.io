@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Tsong Li designed Copilot Personal Finance from the ground up, then built an interactive prototype using the One Copilot design language.">
+  <title>Copilot Personal Finance: Tsong Li Portfolio - V1</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+  </style>
+  <script src="/language-init.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/translations.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Tsong Li, home">Tsong Li<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/resume.html">Resume</a><a href="/#contact">Contact</a></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-breadcrumb"><a class="case-return" href="/#work"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">03 / Conversational decision support</span></div>
+      <h1 id="case-title">Copilot Personal Finance: room to think through a choice<span class="accent-text">.</span></h1>
+      <p class="case-principle">A conversational prototype for exploring credit-card needs and comparing relevant benefits.</p>
+      <dl class="case-facts" aria-label="At a glance">
+        <div><dt>Product / Year</dt><dd>Microsoft Copilot<br>2026</dd></div>
+        <div><dt>Contribution</dt><dd>I designed the experience from the ground up, then built and refined an interactive prototype using the One Copilot design language</dd></div>
+        <div><dt>Scope</dt><dd>Five preset credit-card needs, comparative responses, and persistent card details</dd></div>
+        <div><dt>Outcome</dt><dd>Passed design review; rapid UAT supported taking the direction further</dd></div>
+      </dl>
+    </section>
+
+    <figure class="pf-overview-figure">
+      <img src="/assets/personal-finance-prototype-overview-1600.webp" srcset="/assets/personal-finance-prototype-overview-800.webp 800w, /assets/personal-finance-prototype-overview-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px" width="1920" height="1080" decoding="async" alt="Complete prototype composition with a credit-card conversation, comparison cards, and a persistent details panel, beside a separate insurance design direction.">
+      <a class="pf-fullsize-link" href="/assets/personal-finance-prototype-overview.png">View full-size design image</a>
+      <figcaption>Prototype views show the conversation and persistent card details alongside a separate insurance design direction. Example terms and figures are illustrative, not verified offers or live recommendations. The insurance design is an exploration, not a delivered design.</figcaption>
+    </figure>
+
+    <div class="case-story">
+      <aside class="case-contents">
+        <p class="eyebrow">In this case</p>
+        <nav aria-label="Case contents">
+          <a href="#context">01 / Overview &amp; context</a>
+          <a href="#contribution">02 / My contribution</a>
+          <a href="#decisions">03 / Keeping the conversation useful</a>
+          <a href="#validation">04 / The prototype and its review</a>
+          <a href="#outcome">05 / What people said</a>
+          <a href="#takeaway">06 / What I took forward</a>
+        </nav>
+      </aside>
+      <div class="story-sections">
+        <section id="context" class="story-section">
+          <p class="eyebrow">01 / Overview &amp; context</p>
+          <h2>Let the conversation follow the person’s priorities.</h2>
+          <p>Searching for a financial product can mean switching websites, filling out the same information repeatedly, and comparing terms that are hard to line up. The broader Copilot vision aimed to support more of that process, from comparison and application to managing fees and renewals over time. My work focused on credit-card exploration, using conversation to help people clarify their goals and weigh their options.</p>
+          <p>A fixed questionnaire can feel restrictive when people's priorities change as they learn more. I explored a conversation where they could explain what mattered in their own words, revisit those needs, and answer follow-up questions to clarify their priorities. I developed the interaction in a prototype with preset scenarios and content.</p>
+        </section>
+
+        <section id="contribution" class="story-section">
+          <p class="eyebrow">02 / My contribution</p>
+          <h2>I brought the idea to life as an interactive prototype.</h2>
+          <p>I designed the experience from the ground up, then built and refined an interactive prototype using the One Copilot design language. It combined conversation, comparison formats, and persistent card details. AI helped me implement and iterate the interactions; I set the design direction and decided what to change. Reviewers and participants could follow a specific need through the flow and see the supporting information alongside the conversation.</p>
+          <p>The working interactions gave reviewers more to discuss and test than static screens alone.</p>
+        </section>
+
+        <section id="decisions" class="story-section">
+          <p class="eyebrow">03 / Design decisions</p>
+          <h2>Keep the conversation open, but give it shape.</h2>
+          <p>I made three design choices to keep the conversation flexible and the comparisons easy to follow.</p>
+          <dl class="format-directions">
+            <div><dt>Let priorities<br> change</dt><dd>The conversation opened with a brief question about the person's goal. Follow-up questions could refine their priorities without committing them to a fixed questionnaire.</dd></div>
+            <div><dt>Surface the right<br> signals</dt><dd>Cashback, travel rewards, balance transfers, building credit, and lower interest or fees each required different information for comparison, such as rewards, eligibility, potential savings, or credit growth. Cards brought the next useful details into view while allowing the conversation to continue.</dd></div>
+            <div><dt>Make value<br> inspectable</dt><dd>A persistent detail panel beside the conversation gave people a place to compare options. It was designed to break down annual value, show break-even points, estimate savings, and explain why an option might fit, with its assumptions and trade-offs. People could inspect those details and return to the conversation without losing context.</dd></div>
+          </dl>
+          <div class="pf-scenario-evidence" aria-labelledby="pf-detail-title">
+            <h3 id="pf-detail-title">The detail changed with the goal.</h3>
+            <p>The full board uses a shared hierarchy for card identity, product details, and trust information. The supporting information varies across travel, building credit, cashback, and balance-transfer scenarios. These are prototype examples, not fixed fields or verified product terms.</p>
+            <figure class="pf-detail-figure">
+              <img src="/assets/personal-finance-detail-board-1600.webp" srcset="/assets/personal-finance-detail-board-800.webp 800w, /assets/personal-finance-detail-board-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px" width="3420" height="3728" loading="lazy" decoding="async" alt="Complete detail board with an annotated framework, four scenario-specific card-detail examples, and their conversation views.">
+              <a class="pf-fullsize-link" href="/assets/personal-finance-detail-board.png">View complete detail board</a>
+              <figcaption>A shared identity, product-detail, and trust hierarchy, with four scenario examples and their conversation views.</figcaption>
+            </figure>
+            <p class="pf-evidence-note">All displayed figures and terms are illustrative prototype content, not verified financial offers, eligibility decisions, or live service results.</p>
+          </div>
+        </section>
+
+        <section id="validation" class="story-section">
+          <p class="eyebrow">04 / Prototype &amp; validation</p>
+          <h2>An AI-assisted build made the flow interactive.</h2>
+          <p>I designed the interaction and used AI assistance to build and refine a working prototype. The full recording follows a goal-led prompt, questions about spending, travel-card comparisons with persistent details, and a path for building credit. Its scenarios and content are preset, not generated by a live model.</p>
+          <figure class="pf-video-figure">
+            <video controls playsinline muted preload="none" width="1728" height="1080" poster="/assets/personal-finance-ai-interactive-prototype-poster.jpg" aria-label="Full recording of an AI-assisted interactive credit-card prototype, with audio muted by default" aria-describedby="pf-video-caption pf-video-note">
+              <source src="/assets/personal-finance-ai-interactive-prototype.mp4" type="video/mp4">
+              <a href="/assets/personal-finance-ai-interactive-prototype.mp4">Open the prototype video file</a>
+            </video>
+            <figcaption id="pf-video-caption">AI-assisted interactive prototype walkthrough, showing goal clarification, travel-card comparisons with persistent details, and a build-credit path.</figcaption>
+          </figure>
+          <p id="pf-video-note" class="pf-media-note">The complete original 53-second recording has no frames or audio removed; playback starts muted. It shows a prototype, not a launched service.</p>
+          <p><a class="pf-prototype-source" href="https://github.com/tsongli_microsoft/personal-finance-credit-card" target="_blank" rel="noopener noreferrer">View prototype source on GitHub <span class="sr-only">(opens in a new tab)</span></a></p>
+          <p class="pf-evidence-note">Card terms, estimated values, approval indicators, and review excerpts are illustrative prototype content, not verified offers, eligibility decisions, customer evidence, or live results.</p>
+          <p>We used the prototype in design review and rapid user acceptance testing (UAT) to evaluate the credit-card interaction. In a separate insurance exploration, I applied the same goal-led framework to reviewing current policies, identifying gaps or overlap, considering better-fit options, and weighing whether to keep, adjust, or switch policies.</p>
+        </section>
+
+        <section id="outcome" class="story-section">
+          <p class="eyebrow">05 / Outcome</p>
+          <h2>People valued a more direct way to compare.</h2>
+          <p>The design passed review, and rapid UAT supported taking the direction further. Participants liked getting recommendations through conversation because they could avoid repeatedly switching websites to compare information.</p>
+          <p>Participants also found it easier to identify benefits relevant to their goals in the card details, which helped them compare options.</p>
+          <p>The feedback supported giving people a direct answer while keeping details nearby for closer comparison.</p>
+        </section>
+
+        <section id="takeaway" class="story-section outcome-section">
+          <p class="eyebrow">06 / Design takeaway</p>
+          <h2>Make room to understand why a choice might fit.</h2>
+          <p>People need to see the available options and understand why one might fit their goal. A useful comparison shows the relevant value, assumptions, and trade-offs while allowing priorities to change during the conversation.</p>
+          <p>I came away with a reusable framework for different scenarios, rather than a fixed recommendation path. It starts with a person's goal, presents the information relevant to it, and keeps evidence and context available throughout the comparison.</p>
+        </section>
+      </div>
+    </div>
+    <div class="case-closing"><a class="text-link case-return" href="/#personal-finance"><span class="case-return-arrow" aria-hidden="true">←</span><span>Back to selected work</span></a><a href="/work/think-deeper.html">Next case / Think Deeper</a></div>
+  </main>
+  <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Personal Finance</span><span>Microsoft Copilot · Case study</span><a href="#main">Back to top</a></footer>
+</body>
+</html>

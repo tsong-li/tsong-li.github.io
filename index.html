@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected product design by Tsong Li, spanning Copilot, Microsoft Advertising, global products, and earlier work at ByteDance and Tencent.">
+  <title>Tsong Li Portfolio - V1</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+  </style>
+  <script src="/language-init.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/translations.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Tsong Li, home">Tsong Li<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <a href="/resume.html">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="home-hero" aria-labelledby="hero-title">
+      <div class="hero-heading">
+        <p class="eyebrow"><span class="accent-stroke" aria-hidden="true"></span> Product design grounded in clarity</p>
+        <h1 id="hero-title"><span class="hero-title-line"><span>Complexity</span><span class="hero-title-comma" lang="en">,</span><span class="hero-title-comma" lang="zh-CN">，</span></span><br><span class="hero-title-line">made clear<span class="accent-text hero-title-period" lang="en">.</span><span class="accent-text hero-title-period" lang="zh-CN">。</span></span></h1>
+      </div>
+      <div class="hero-intro">
+        <p class="positioning">Product design for Copilot, enterprise tools, and global products.</p>
+        <p>I use product judgment, systems thinking, and prototypes to make complex information easier to act on. I take ideas from interaction design through delivery.</p>
+      </div>
+    </section>
+
+    <section id="work" aria-labelledby="work-heading">
+      <div class="section-heading">
+        <h2 id="work-heading">Selected work <span class="section-context">/ Four work directions</span></h2>
+        <span class="section-context">11 case studies across four directions</span>
+      </div>
+      <nav class="work-navigation" aria-label="Work directions">
+        <a href="#copilot-content-finance"><span class="index-label">01</span> Copilot content &amp; multimodal</a>
+        <a href="#copilot-core"><span class="index-label">02</span> Core experience</a>
+        <a href="#advertising-platform"><span class="index-label">03</span> Advertising platform</a>
+        <a href="#earlier-work"><span class="index-label">04</span> Earlier work</a>
+      </nav>
+
+      <section class="work-group work-group--copy-right" id="copilot-content-finance" aria-labelledby="copilot-content-heading">
+        <div class="section-heading work-group-heading"><div class="work-group-title"><span class="work-group-number" aria-hidden="true">01</span><h3 id="copilot-content-heading">Copilot Content &amp; Multimodal Experiences</h3></div></div>
+        <p class="work-group-context">This work covers financial content in Discover and ways to follow news through reading, listening, or watching.</p>
+        <section class="company-work" aria-labelledby="discover-finance-heading">
+          <div class="overview-heading company-heading"><h4 id="discover-finance-heading">Discover &amp; Finance</h4></div>
+      <article class="featured-project discover-project" id="discover-finance" aria-labelledby="discover-project-title">
+        <div class="project-copy">
+          <div class="project-meta"><span>Microsoft Copilot</span><span>2026</span></div>
+          <p class="project-category">Finance editorial experience</p>
+          <h4 id="discover-project-title">Copilot Discover Finance Feed</h4>
+          <p class="project-thesis">Turn market signals into context people can use.</p>
+          <p class="project-description">I designed and shipped a personalized Finance insight card. I then delivered a Discover Finance feed design for desktop and mobile that connected market movements and company events to users' interests.</p>
+          <p class="scope-note">Insight card shipped · Feed design delivered</p>
+          <p class="role-line">Finance content design · Desktop and mobile feed</p>
+          <a class="text-link" href="/work/discover-finance.html" aria-label="Read Copilot Discover Finance Feed case study">Read case study</a>
+        </div>
+        <figure class="project-figure project-screenshot">
+          <img src="/assets/discover-finance-feed-final-1600.webp" srcset="/assets/discover-finance-feed-final-800.webp 800w, /assets/discover-finance-feed-final-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(57.5vw - 55.2px), (max-width: 1264px) calc(60vw - 96px), 663px" width="3840" height="2160" loading="lazy" decoding="async" alt="Final Finance feed design: a desktop feed alongside mobile market-brief and stock-event views">
+        </figure>
+      </article>
+
+      <article class="featured-project" id="personal-finance" aria-labelledby="personal-finance-title">
+        <div class="project-copy">
+          <div class="project-meta"><span>Microsoft</span><span>2026</span></div>
+          <p class="project-category">Conversational decision support</p>
+          <h4 id="personal-finance-title">Copilot Personal Finance</h4>
+          <p class="project-thesis">Let the conversation follow the question.</p>
+          <p class="project-description">I designed the experience from scratch, then built and refined an interactive prototype in the One Copilot design language for five credit-card goals. Users can clarify their priorities through conversation, ask questions in their own order, and compare preset responses with key details always available.</p>
+          <p class="scope-note">Scenario-based prototype · Preset content</p>
+          <p class="role-line">Ground-up experience design · One Copilot prototype</p>
+          <a class="text-link" href="/work/personal-finance.html" aria-label="Read Copilot Personal Finance case study">Read case study</a>
+        </div>
+        <figure class="project-figure project-screenshot">
+          <img src="/assets/personal-finance-prototype-overview-1600.webp" srcset="/assets/personal-finance-prototype-overview-800.webp 800w, /assets/personal-finance-prototype-overview-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(57.5vw - 55.2px), (max-width: 1264px) calc(60vw - 96px), 663px" width="1920" height="1080" loading="lazy" decoding="async" alt="Complete prototype composition with a credit-card conversation, comparison cards, and a persistent details panel, beside a separate insurance design direction.">
+        </figure>
+      </article>
+      </section>
+        <section class="company-work" aria-labelledby="multimodal-heading">
+          <div class="overview-heading company-heading"><h4 id="multimodal-heading">Daily &amp; Newsflow</h4></div>
+          <article class="featured-project" id="copilot-daily" aria-labelledby="daily-title">
+            <div class="project-copy">
+              <div class="project-meta"><span>Microsoft Copilot</span><span>2025</span></div>
+              <p class="project-category">Playback state · Sound guidance · Transcript progress</p>
+              <h4 id="daily-title">Copilot Daily</h4>
+              <p class="project-thesis">Make quiet playback easy to notice.</p>
+              <p class="project-description">When browser restrictions prevented sound, the player could appear inactive. I shipped in-player sound guidance and scrolling transcript subtitles so people could see playback progressing.</p>
+              <p class="role-line">Web playback · In-player state · Transcript subtitles</p>
+              <a class="text-link" href="/work/copilot-daily.html" aria-label="Read the Copilot Daily case study">Read case study</a>
+            </div>
+            <figure class="project-figure project-screenshot">
+              <img src="/assets/copilot-daily-listening-views-1600.webp" srcset="/assets/copilot-daily-listening-views-800.webp 800w, /assets/copilot-daily-listening-views-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(57.5vw - 55.2px), (max-width: 1264px) calc(60vw - 96px), 663px" width="3840" height="2160" loading="lazy" decoding="async" alt="Desktop and mobile Copilot Daily listening views with briefing text, source labels, playback controls, and a message field; the mobile view also shows an AI fallibility notice and position indicators.">
+            </figure>
+          </article>
+          <article class="featured-project" id="newsflow" aria-labelledby="newsflow-title">
+            <div class="project-copy">
+              <div class="project-meta"><span>Personal project</span><span>2026</span></div>
+              <p class="project-category">AI-assisted product build</p>
+              <h4 id="newsflow-title">Newsflow</h4>
+              <p class="project-thesis">Make the news fit the moment you have.</p>
+              <p class="project-description">I conceived, designed, built, tested, and deployed this news exploration, with reading, quick digests, listening, and watching. The listening time users choose determines both the queue and the length of narration.</p>
+              <p class="role-line">Concept, design, AI-assisted build, integration, and deployment</p>
+              <a class="text-link" href="/work/newsflow.html" aria-label="Read the Newsflow case study">Read case study</a>
+            </div>
+            <figure class="project-figure project-screenshot">
+              <img src="/assets/newsflow-interface-1600.webp" srcset="/assets/newsflow-interface-800.webp 800w, /assets/newsflow-interface-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(57.5vw - 55.2px), (max-width: 1264px) calc(60vw - 96px), 663px" width="1920" height="1080" loading="lazy" decoding="async" alt="Newsflow screenshot showing a central news article, an AI Digest with key points and context, and a Newsflow Radio panel with listening-time choices and playback controls.">
+            </figure>
+          </article>
+        </section>
+      </section>
+
+      <section class="work-group work-group--figure-left" id="copilot-core" aria-labelledby="copilot-core-heading">
+        <div class="section-heading work-group-heading"><div class="work-group-title"><span class="work-group-number" aria-hidden="true">02</span><h3 id="copilot-core-heading">Copilot Core Experience</h3></div></div>
+      <article class="featured-project" aria-labelledby="think-deeper-project-title">
+        <div class="project-copy">
+          <div class="project-meta"><span>Microsoft Copilot</span><span>2025</span></div>
+          <p class="project-category">AI interaction framework</p>
+          <h4 id="think-deeper-project-title">Copilot Think Deeper</h4>
+          <p class="project-thesis">Keep the answer in view and its rationale easy to check.</p>
+          <p class="project-description">For Think Deeper, I explored ways to show a high-level explanation of the process while keeping the answer in view.</p>
+          <p class="role-line">Design lead, Think Deeper squad</p>
+          <a class="text-link" href="/work/think-deeper.html">Read case study</a>
+        </div>
+
+        <figure class="project-figure project-screenshot think-deeper-home-figure">
+          <img src="/assets/think-deeper-comparison-overview-1600.webp" srcset="/assets/think-deeper-comparison-overview-800.webp 800w, /assets/think-deeper-comparison-overview-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(57.5vw - 55.2px), (max-width: 1264px) calc(60vw - 96px), 663px" width="1920" height="1080" loading="lazy" decoding="async" alt="Think Deeper comparison overview with an inline process explanation in the left view and the answer beside its explanation in the right view.">
+        </figure>
+      </article>
+
+      <article class="featured-project" id="private-chat" aria-labelledby="private-chat-title">
+        <div class="project-copy">
+          <div class="project-meta"><span>Microsoft Copilot</span><span>2025</span></div>
+          <p class="project-category">Privacy &amp; mode clarity</p>
+          <h4 id="private-chat-title">Copilot Temporary Chat</h4>
+          <p class="project-thesis">Make Temporary Chat easy to find and easy to recognize.</p>
+          <p class="project-description">I led design across the full web and mobile experience and explored matching transitions for entering and leaving Temporary Chat.</p>
+          <p class="role-line">End-to-end web and mobile design</p>
+          <a class="text-link" href="/work/private-chat.html" aria-label="Read Copilot Temporary Chat case study">Read case study</a>
+        </div>
+
+        <figure class="project-figure featured-figure temporary-chat-visual">
+          <picture>
+            <source type="image/webp" srcset="/assets/temporary-chat-overview-800.webp 800w, /assets/temporary-chat-overview-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(57.5vw - 55.2px), (max-width: 1264px) calc(60vw - 96px), 663px">
+            <img src="/assets/temporary-chat-overview.png" width="3840" height="2160" loading="lazy" decoding="async" alt="Copilot Temporary Chat concepts across desktop and mobile, showing a temporary-mode indicator and conversation entry views.">
+          </picture>
+        </figure>
+      </article>
+      <article class="featured-project" id="deep-research" aria-labelledby="deep-research-title">
+        <div class="project-copy">
+          <div class="project-meta"><span>Microsoft Copilot</span><span>2025</span></div>
+          <p class="project-category">Report clarity &amp; sharing scope</p>
+          <h4 id="deep-research-title">Copilot Deep Research</h4>
+          <p class="project-thesis">Share the report, with only the context it needs.</p>
+          <p class="project-description">I led design for four report enhancements that shipped: charts, the Copilot Web Report Card, web and mobile sharing, and the Promotion Card for launch.</p>
+          <p class="role-line">Design lead for four report-experience enhancements</p>
+          <a class="text-link" href="/work/deep-research.html" aria-label="Read Copilot Deep Research case study">Read case study</a>
+        </div>
+
+        <figure class="project-figure featured-figure deep-research-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/deep-research-overview-800.webp 800w, /assets/deep-research-overview-1600.webp 1600w, /assets/deep-research-overview-2400.webp 2400w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(57.5vw - 55.2px), (max-width: 1264px) calc(60vw - 96px), 663px">
+            <img src="/assets/deep-research-overview.png" width="3840" height="2160" loading="lazy" decoding="async" alt="Desktop Deep Research report with a chart and a mobile report-share preview; the rainfall example is illustrative.">
+          </picture>
+        </figure>
+      </article>
+      </section>
+
+      <section class="work-group work-group--copy-right" id="advertising-platform" aria-labelledby="advertising-heading">
+        <div class="section-heading work-group-heading"><div class="work-group-title"><span class="work-group-number" aria-hidden="true">03</span><h3 id="advertising-heading">Microsoft Advertising Platform</h3></div></div>
+      <article class="featured-project" id="tax-cti" aria-labelledby="tax-project-title">
+        <div class="project-copy">
+          <div class="project-meta"><span>Microsoft Advertising</span><span>2026</span></div>
+          <p class="project-category">Enterprise workflow prototyping</p>
+          <h4 id="tax-project-title">Tax CTI operations</h4>
+          <p class="project-thesis">Keep the agreed workflow. Rebuild the interface to fit the system.</p>
+          <p class="project-description">I used an AI-assisted prototype to clarify the tax requirements. Finance review narrowed the workflow to three stages. After frontend feedback, I rebuilt the prototype with the platform's Storybook components and tokens, then updated the PRD for engineering.</p>
+          <p class="role-line">Product design · Prototyping · Finance validation · Engineering handoff</p>
+          <a class="text-link" href="/work/tax-cti.html" aria-label="Read the Tax CTI case study">Read case study</a>
+        </div>
+        <figure class="project-figure featured-figure tax-cti-visual">
+          <picture>
+            <source type="image/webp" srcset="/assets/tax-cti-overview-800.webp 800w, /assets/tax-cti-overview-1600.webp 1600w, /assets/tax-cti-overview-2400.webp 2400w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(57.5vw - 55.2px), (max-width: 1264px) calc(60vw - 96px), 663px">
+            <img src="/assets/tax-cti-overview.png" width="3840" height="2160" loading="lazy" decoding="async" alt="An exploratory operations dashboard with history appears in front of a more focused three-stage bulk tax-record workflow.">
+          </picture>
+        </figure>
+      </article>
+      </section>
+
+      <section class="work-group work-group--text-only" id="earlier-work" aria-labelledby="earlier-work-heading">
+        <div class="section-heading work-group-heading"><div class="work-group-title"><span class="work-group-number" aria-hidden="true">04</span><h3 id="earlier-work-heading">Earlier Work: ByteDance &amp; Tencent</h3></div></div>
+        <section class="company-work" aria-labelledby="bytedance-heading">
+          <div class="overview-heading company-heading"><h4 id="bytedance-heading">ByteDance</h4></div>
+          <article class="featured-project earlier-text-project" id="lark-internationalization" aria-labelledby="lark-project-title">
+            <div class="earlier-text-heading">
+              <div class="project-meta"><span>ByteDance</span><span>2022–2023</span></div>
+              <p class="project-category">Internationalization systems</p>
+              <h4 id="lark-project-title">Lark internationalization</h4>
+              <p class="project-thesis">Make global readiness part of the design system.</p>
+            </div>
+            <div class="earlier-text-detail">
+              <p class="project-description">I led work with engineering and content teams on multilingual standards, translation-tool behavior, a handoff SOP, and font-verification rules. We addressed layout and typography issues that translation alone could not solve.</p>
+              <p class="role-line">Internationalization standards · Cross-functional tooling and handoff</p>
+              <a class="text-link" href="/work/lark-i18n.html" aria-label="Read the Lark internationalization case study">Read case study</a>
+            </div>
+          </article>
+        </section>
+        <section class="company-work" aria-labelledby="tencent-heading">
+          <div class="overview-heading company-heading"><h4 id="tencent-heading">Tencent</h4></div>
+          <article class="featured-project earlier-text-project" id="weishi-7" aria-labelledby="weishi-project-title">
+            <div class="earlier-text-heading">
+              <div class="project-meta"><span>Tencent · Wesee</span><span>2021</span></div>
+              <p class="project-category">Mobile video publishing &amp; editing</p>
+              <h4 id="weishi-project-title">Wesee 7.0</h4>
+              <p class="project-thesis">Let an everyday edit stay simple, with more control within reach.</p>
+            </div>
+            <div class="earlier-text-detail">
+              <p class="project-description">I led the design team in developing a three-level editing framework. Task validation led us to move directly from text entry to timing controls. We kept music selection familiar, with more detailed timeline controls still available when creators needed them.</p>
+              <p class="role-line">Design team lead · Video publishing experience</p>
+              <a class="text-link" href="/work/weishi-7.html" aria-label="Read the Wesee 7.0 case study">Read case study</a>
+            </div>
+          </article>
+          <article class="featured-project earlier-text-project" id="light-studio" aria-labelledby="light-studio-title">
+            <div class="earlier-text-heading">
+              <div class="project-meta"><span>Tencent</span><span>2021</span></div>
+              <p class="project-category">Desktop creative-production workflow</p>
+              <h4 id="light-studio-title">Light Studio / Tencent Effect</h4>
+              <p class="project-thesis">Make technical effect setup feel like creative work.</p>
+            </div>
+            <div class="earlier-text-detail">
+              <p class="project-description">I led the design team on an effect-production workspace for the Wesee ecosystem. We used familiar creative-tool regions, explored groups that made technical relationships easier to understand, and added selection recovery and phone preview to the workflow.</p>
+              <p class="role-line">Design team lead · Creator-workspace design</p>
+              <a class="text-link" href="/work/light-studio.html" aria-label="Read the Light Studio and Tencent Effect case study">Read case study</a>
+            </div>
+          </article>
+        </section>
+      </section>
+    </section>
+
+    <section id="approach" class="approach-section" aria-labelledby="approach-heading">
+      <div class="section-heading"><h2 id="approach-heading">Approach</h2><span class="section-context">From ambiguity to something useful</span></div>
+      <div class="principles">
+        <article><span class="index-label">01 / Judgment</span><h3>Begin with the decision.</h3><p>I start with the decision a person needs to make and keep the design focused on it as information, features, and constraints accumulate.</p></article>
+        <article><span class="index-label">02 / Systems</span><h3>Design for the system around it.</h3><p>I turn individual design decisions into reusable rules, accounting for language, context, components, and the people who maintain them. This lets a solution work beyond its original use.</p></article>
+        <article><span class="index-label">03 / Collaboration</span><h3>Make the work tangible early.</h3><p>I use prototypes to help teams compare ideas and agree on a direction before handing the work to engineering.</p></article>
+      </div>
+    </section>
+
+    <section id="about" class="about-section" aria-labelledby="about-heading">
+      <div><p class="eyebrow">About</p><h2 id="about-heading">Hands-on design,<br>with a systems view.</h2></div>
+      <div class="about-copy"><p>I'm a senior product designer with experience at Microsoft, ByteDance, Tencent, and NAVER.</p><p>My work covers product and interaction design, internationalization, and collaboration across teams. I focus on making complex experiences easier to understand and practical to build.</p><p>At Tencent, I led a 10-person design team. Today, I focus on hands-on product decisions, systems, and working with others to turn designs into working prototypes.</p></div>
+    </section>
+
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <div><p class="eyebrow">Contact</p><h2 id="contact-heading">Have a complex<br>product challenge?</h2></div>
+      <div class="contact-links"><a href="mailto:tsonglee@qq.com">tsonglee@qq.com</a><a href="https://www.linkedin.com/in/tsong/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="sr-only"> (opens in a new tab)</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Selected work</span><span>Microsoft · ByteDance · Tencent</span><a href="#main">Back to top</a></footer>
+</body>
+</html>

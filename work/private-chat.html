@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Tsong Li designed Copilot Temporary Chat for web and mobile, explored paired entry and exit animations, and adapted the mode control for launch when the animations could not ship.">
+  <title>Copilot Temporary Chat: Tsong Li Portfolio - V1</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+  </style>
+  <script src="/language-init.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/translations.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Tsong Li, home">Tsong Li<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/resume.html">Resume</a><a href="/#contact">Contact</a></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-breadcrumb"><a class="case-return" href="/#copilot-core"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">Privacy &amp; mode clarity</span></div>
+      <h1 id="case-title">Copilot Temporary Chat: make the mode clear<span class="accent-text">.</span></h1>
+      <p class="case-principle">Temporary Chat should be easy to find and clear once it is active.</p>
+      <dl class="case-facts" aria-label="At a glance">
+        <div><dt>Product</dt><dd>Microsoft Copilot<br>Temporary Chat</dd></div>
+        <div><dt>Contribution</dt><dd>End-to-end product design across web and mobile</dd></div>
+        <div><dt>Scope</dt><dd>Flows, interactions, interface design, and exploration of entry points, icons, and motion</dd></div>
+        <div><dt>Delivery</dt><dd>The web and mobile experience shipped; the paired transition animations did not</dd></div>
+      </dl>
+    </section>
+
+    <figure class="temporary-chat-overview temporary-chat-visual">
+      <picture>
+        <source type="image/webp" srcset="/assets/temporary-chat-overview-800.webp 800w, /assets/temporary-chat-overview-1600.webp 1600w, /assets/temporary-chat-overview-2400.webp 2400w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px">
+        <img src="/assets/temporary-chat-overview.png" width="3840" height="2160" loading="lazy" decoding="async" alt="Copilot Temporary Chat concepts across desktop and mobile, showing a temporary-mode indicator and conversation entry views.">
+      </picture>
+      <figcaption>Desktop and mobile Temporary Chat concepts, showing the mode indicator and conversation entry views.</figcaption>
+      <a class="case-image-link" href="/assets/temporary-chat-overview.png" target="_blank" rel="noopener noreferrer">View full-size Temporary Chat design <span class="sr-only">(opens in a new tab)</span></a>
+    </figure>
+
+    <div class="case-story">
+      <aside class="case-contents">
+        <p class="eyebrow">In this case</p>
+        <nav aria-label="Case contents">
+          <a href="#context">01 / Context &amp; contribution</a>
+          <a href="#clarity">02 / Finding and recognizing the mode</a>
+          <a href="#motion">03 / Motion exploration</a>
+          <a href="#adaptation">04 / What shipped instead</a>
+          <a href="#delivery">05 / Delivery</a>
+          <a href="#takeaway">06 / Design takeaway</a>
+        </nav>
+      </aside>
+      <div class="story-sections">
+        <section id="context" class="story-section">
+          <p class="eyebrow">01 / Context &amp; contribution</p>
+          <h2>Help people find the mode and recognize it once they are in.</h2>
+          <p>User research revealed significant privacy concerns. Worries about how conversations might be remembered or used could keep people from engaging fully with Copilot. The Productivity Core squad was developing an option for temporary conversations about personal, sensitive, or taboo topics, later named Temporary Chat. My work focused on making the option easy to find and the active mode clear once a conversation began.</p>
+          <p>I led end-to-end design for web and mobile, working with the wider product team on flows, interactions, and interface details. I focused on three moments in the experience: finding the option, recognizing when it was active, and knowing when the conversation returned to standard mode.</p>
+        </section>
+
+        <section id="clarity" class="story-section">
+          <p class="eyebrow">02 / Discoverability &amp; state</p>
+          <h2>Finding the mode is only the first step.</h2>
+          <p>The interface needed to make the entry recognizable and show when Temporary Chat was active throughout the conversation.</p>
+          <p>I explored entry-point treatments and icons to make Temporary Chat easy to find and its active state easy to recognize. These cues were intended to support people discussing personal topics by giving them a visible state to check during the conversation.</p>
+        </section>
+
+        <section id="motion" class="story-section">
+          <p class="eyebrow">03 / Motion exploration (not shipped)</p>
+          <h2>Let the transition tell one story, in both directions.</h2>
+          <p>One concept paired entry and exit animations. On entry, the interface moved from a standard conversation to a fresh screen labeled Temporary Chat. On exit, the conversation blurred as the interface returned to the standard start screen.</p>
+          <p>The Design Council responded positively to the paired concept. Its motion made the intended mode switch visible.</p>
+          <figure class="temporary-chat-motion">
+            <h3>Entering Temporary Chat</h3>
+            <video controls muted playsinline preload="none" width="2878" height="2158" poster="/assets/temporary-chat-enter-poster.webp" aria-label="Temporary Chat entrance motion, an unshipped concept" aria-describedby="temporary-chat-enter-caption">
+              <source src="/assets/temporary-chat-enter-motion.mp4" type="video/mp4">
+            </video>
+            <figcaption id="temporary-chat-enter-caption">Unshipped entrance exploration: the interface moves from a standard conversation to a fresh screen labeled for Temporary Chat. <a class="case-image-link" href="/assets/temporary-chat-enter-motion.mp4" target="_blank" rel="noopener noreferrer">Open the entrance motion file <span class="sr-only">(opens in a new tab)</span></a></figcaption>
+          </figure>
+          <figure class="temporary-chat-motion">
+            <h3>Leaving Temporary Chat</h3>
+            <video controls muted playsinline preload="none" width="2874" height="1854" poster="/assets/temporary-chat-exit-poster.webp" aria-label="Temporary Chat exit motion, an unshipped concept" aria-describedby="temporary-chat-exit-caption">
+              <source src="/assets/temporary-chat-exit-motion.mp4" type="video/mp4">
+            </video>
+            <figcaption id="temporary-chat-exit-caption">Unshipped exit exploration: the conversation blurs as the interface returns to the standard start screen. <a class="case-image-link" href="/assets/temporary-chat-exit-motion.mp4" target="_blank" rel="noopener noreferrer">Open the exit motion file <span class="sr-only">(opens in a new tab)</span></a></figcaption>
+          </figure>
+        </section>
+
+        <section id="adaptation" class="story-section">
+          <p class="eyebrow">04 / Shipped adaptation</p>
+          <h2>Keep the active state clear without animation.</h2>
+          <p>Implementation constraints kept both transition animations out of the launch. The interface still needed to make the active mode clear without relying on motion.</p>
+          <dl class="format-directions">
+            <div><dt>Explored<br> not shipped</dt><dd>The paired entry and exit animations made the mode change expressive. The concept received positive feedback from the Design Council, but neither animation shipped.</dd></div>
+            <div><dt>Adapted<br> and shipped</dt><dd>I changed the mode control from toggle styling to primary-button styling, making the active Temporary Chat state more prominent without relying on motion.</dd></div>
+          </dl>
+          <p>The control made the active mode more visible during the conversation, preserving the intent of the unshipped transitions.</p>
+        </section>
+
+        <section id="delivery" class="story-section">
+          <p class="eyebrow">05 / Delivery</p>
+          <h2>The mode shipped on web and mobile.</h2>
+          <p>The shipped version used primary-button styling to make the active mode more prominent. The paired transitions remained a design exploration.</p>
+          <p>The primary-button styling shipped on web and mobile, keeping the active-mode cue visible during the conversation. It was designed to make the intended boundary of Temporary Chat easier to recognize.</p>
+        </section>
+
+        <section id="takeaway" class="story-section outcome-section">
+          <p class="eyebrow">06 / Design takeaway</p>
+          <h2>Clarity has to last beyond the transition.</h2>
+          <p>The entry can set expectations, but people still need a recognizable cue once they are in the mode. I learned to treat discovery and the active state as one continuous experience, then adapt the design to what could ship.</p>
+        </section>
+      </div>
+    </div>
+    <div class="case-closing"><a class="text-link case-return" href="/#private-chat"><span class="case-return-arrow" aria-hidden="true">←</span><span>Back to selected work</span></a><a href="/work/think-deeper.html">Next case / Think Deeper</a></div>
+  </main>
+  <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Temporary Chat</span><span>Microsoft Copilot · Case study</span><a href="#main">Back to top</a></footer>
+</body>
+</html>

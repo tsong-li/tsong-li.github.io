@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Tsong Li compared three Think Deeper layouts to make high-level process explanations accessible while keeping the answer in view.">
+  <title>Think Deeper: Tsong Li Portfolio - V1</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+  </style>
+  <script src="/language-init.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/translations.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Tsong Li, home">Tsong Li<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/resume.html">Resume</a><a href="/#contact">Contact</a></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-breadcrumb"><a class="case-return" href="/#work"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">01 / AI interaction framework</span></div>
+      <h1 id="case-title">Think Deeper: keep the answer in view<span class="accent-text">.</span></h1>
+      <p class="case-principle">Keep high-level process explanations easy to review alongside the answer.</p>
+      <dl class="case-facts" aria-label="At a glance">
+        <div><dt>Product / Year</dt><dd>Microsoft Copilot<br>2025</dd></div>
+        <div><dt>Role</dt><dd>Design lead,<br>Think Deeper squad</dd></div>
+        <div><dt>Scope</dt><dd>Three layout explorations and a framework recommendation for related contexts</dd></div>
+        <div><dt>Outcome</dt><dd>The team adopted the side-by-side recommendation</dd></div>
+      </dl>
+    </section>
+
+    <figure class="think-deeper-overview">
+      <img src="/assets/think-deeper-comparison-overview-1600.webp" srcset="/assets/think-deeper-comparison-overview-800.webp 800w, /assets/think-deeper-comparison-overview-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px" width="1920" height="1080" loading="lazy" decoding="async" alt="Think Deeper comparison overview with an inline process explanation in the left view and the answer beside its explanation in the right view.">
+      <figcaption>The inline exploration and the side-by-side direction adopted by the team, shown with the same response.</figcaption>
+      <a class="case-image-link" href="/assets/think-deeper-comparison-overview.png" target="_blank" rel="noopener noreferrer">View the full comparison image <span class="sr-only">(opens in a new tab)</span></a>
+    </figure>
+
+    <section id="comparison" class="comparison-section" aria-labelledby="comparison-heading">
+      <div class="comparison-toolbar">
+        <div><h2 id="comparison-heading">Three layouts, compared in sequence.</h2><p>Watch each full exploration to compare the reading trade-offs.</p></div>
+      </div>
+      <div class="think-deeper-flows">
+        <section class="think-deeper-flow" aria-labelledby="inline-heading">
+          <h3 id="inline-heading">Inline</h3>
+          <video controls muted playsinline preload="none" width="2390" height="1792" poster="/assets/think-deeper-inline-flow-poster.webp" aria-label="Full inline design exploration flow, muted by default" aria-describedby="inline-tradeoff">
+            <source src="/assets/think-deeper-inline-flow.mp4" type="video/mp4">
+            <a href="/assets/think-deeper-inline-flow.mp4">Open the full inline video</a>
+          </video>
+          <p class="think-deeper-tradeoff" id="inline-tradeoff"><strong>Advantage:</strong> The explanation stays in the conversation. <strong>Trade-off:</strong> As the explanation grows, it pushes the answer down and requires more scrolling.</p>
+        </section>
+        <section class="think-deeper-flow" aria-labelledby="pane-heading">
+          <h3 id="pane-heading">Side pane</h3>
+          <video controls muted playsinline preload="none" width="2394" height="1792" poster="/assets/think-deeper-side-pane-flow-poster.webp" aria-label="Full side-pane overlay design exploration flow, muted by default" aria-describedby="pane-tradeoff">
+            <source src="/assets/think-deeper-side-pane-flow.mp4" type="video/mp4">
+            <a href="/assets/think-deeper-side-pane-flow.mp4">Open the full side-pane video</a>
+          </video>
+          <p class="think-deeper-tradeoff" id="pane-tradeoff"><strong>Advantage:</strong> A separate pane can hold a longer explanation. <strong>Trade-off:</strong> The overlay obscures the answer, so readers cannot compare both at once.</p>
+        </section>
+        <section class="think-deeper-flow" aria-labelledby="split-heading">
+          <h3 id="split-heading">Side by side</h3>
+          <video controls muted playsinline preload="none" width="2874" height="2158" poster="/assets/think-deeper-side-by-side-flow-poster.webp" aria-label="Full side-by-side design exploration flow, muted by default" aria-describedby="split-tradeoff">
+            <source src="/assets/think-deeper-side-by-side-flow.mp4" type="video/mp4">
+            <a href="/assets/think-deeper-side-by-side-flow.mp4">Open the full side-by-side video</a>
+          </video>
+          <p class="think-deeper-tradeoff" id="split-tradeoff"><strong>Team decision:</strong> The team adopted this direction. <strong>Advantage:</strong> The answer and explanation stay visible together. <strong>Trade-off:</strong> The layout needs enough width, so narrower contexts need another arrangement.</p>
+        </section>
+      </div>
+      <p class="think-deeper-evidence-note">The recordings use an electric-car comparison as sample content, not verified research. They show user-facing process explanations and have no audio.</p>
+    </section>
+
+    <div class="case-story">
+      <aside class="case-contents">
+        <p class="eyebrow">In this case</p>
+        <nav aria-label="Case contents"><a href="#context">01 / The problem</a><a href="#decision">02 / The decision</a><a href="#framework">03 / The framework</a><a href="#outcome">04 / The outcome</a></nav>
+      </aside>
+      <div class="story-sections">
+        <section id="context" class="story-section">
+          <p class="eyebrow">01 / The problem</p>
+          <h2>More context, without losing the answer.</h2>
+          <p>Think Deeper aimed to present high-level process explanations alongside an answer. The challenge was to let people review those explanations without interrupting their task.</p>
+          <p>I focused on user-facing explanations of how the response was organized, separate from the model's hidden reasoning.</p>
+        </section>
+
+        <section id="decision" class="story-section">
+          <p class="eyebrow">02 / The decision</p>
+          <h2>Three layouts brought the trade-offs into focus.</h2>
+          <p>I used the same task to explore inline explanations, a side-pane overlay, and a side-by-side layout. This made their effects on the reading flow easier to compare.</p>
+          <blockquote>My principle was to keep the answer in focus and the process explanation available to review.</blockquote>
+          <p>Inline explanations pushed the answer down as they grew, while the overlay obscured it. The side-by-side layout kept both visible for comparison, but needed enough width. In narrow containers, the two areas needed a different arrangement.</p>
+          <div class="think-deeper-detail-shots" role="group" aria-label="Design screenshots for the three layout explorations">
+            <figure class="think-deeper-design">
+              <img src="/assets/think-deeper-inline-design-1600.webp" srcset="/assets/think-deeper-inline-design-800.webp 800w, /assets/think-deeper-inline-design-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(50vw - 44px), (max-width: 1100px) calc(50vw - 162px), (max-width: 1264px) calc(50vw - 236px), 396px" width="1645" height="1279" loading="lazy" decoding="async" alt="Think Deeper inline design screenshot with the process explanation expanded within the conversation, taking up the answer's reading space.">
+              <figcaption>Inline exploration: the explanation expands within the conversation.</figcaption>
+              <a class="case-image-link" href="/assets/think-deeper-inline-design.png" target="_blank" rel="noopener noreferrer">View full inline design <span class="sr-only">(opens in a new tab)</span></a>
+            </figure>
+            <figure class="think-deeper-design">
+              <img src="/assets/think-deeper-side-pane-design-1600.webp" srcset="/assets/think-deeper-side-pane-design-800.webp 800w, /assets/think-deeper-side-pane-design-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(50vw - 44px), (max-width: 1100px) calc(50vw - 162px), (max-width: 1264px) calc(50vw - 236px), 396px" width="1639" height="1279" loading="lazy" decoding="async" alt="Think Deeper side-pane design screenshot with a process explanation in a right-hand overlay and the answer blurred behind it.">
+              <figcaption>Side pane: the overlay obscures the answer.</figcaption>
+              <a class="case-image-link" href="/assets/think-deeper-side-pane-design.png" target="_blank" rel="noopener noreferrer">View full side-pane design <span class="sr-only">(opens in a new tab)</span></a>
+            </figure>
+            <figure class="think-deeper-design">
+              <img src="/assets/think-deeper-side-by-side-design-1600.webp" srcset="/assets/think-deeper-side-by-side-design-800.webp 800w, /assets/think-deeper-side-by-side-design-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(50vw - 44px), (max-width: 1100px) calc(50vw - 162px), (max-width: 1264px) calc(50vw - 236px), 396px" width="2880" height="2160" loading="lazy" decoding="async" alt="Think Deeper side-by-side design: the sample electric-car answer on the left remains readable beside a user-facing process explanation on the right.">
+              <figcaption>Side by side: answer and explanation remain visible together.</figcaption>
+              <a class="case-image-link" href="/assets/think-deeper-side-by-side-design.png" target="_blank" rel="noopener noreferrer">View full side-by-side design <span class="sr-only">(opens in a new tab)</span></a>
+            </figure>
+          </div>
+          <div class="decision-table-wrap">
+            <table class="decision-table">
+              <caption>How the three layouts shape the reading experience</caption>
+              <thead><tr><th scope="col">Consideration</th><th scope="col">Inline</th><th scope="col">Side pane</th><th scope="col">Side by side</th></tr></thead>
+              <tbody><tr><th scope="row">Reading continuity</th><td>Answer shifts</td><td>Answer obscured</td><td>Answer stays</td></tr><tr><th scope="row">Simultaneous visibility</th><td>Limited by length</td><td>No</td><td>Yes, with room</td></tr><tr><th scope="row">Long-content handling</th><td>More scrolling in the conversation</td><td>Contained overlay</td><td>Dedicated panel</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="framework" class="story-section">
+          <p class="eyebrow">03 / The framework</p>
+          <h2>The principle should travel across screens.</h2>
+          <p>I explored the approach in desktop chat, Pages side chat, and mobile entry points and layouts. The arrangement could change as long as the explanation stayed accessible without interrupting the main task.</p>
+          <div class="adaptation-note">
+            <figure class="think-deeper-mobile-figure">
+              <img src="/assets/think-deeper-mobile-adaptation-1600.webp" srcset="/assets/think-deeper-mobile-adaptation-800.webp 800w, /assets/think-deeper-mobile-adaptation-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px" width="1920" height="1080" loading="lazy" decoding="async" alt="Mobile Think Deeper design showing an answer with a See my thinking entry, an open process-explanation sheet with source details, and a scrolled sheet containing a comparison table.">
+              <figcaption>Mobile exploration: the answer includes an entry to a scrollable process explanation and comparison table.</figcaption>
+              <a class="case-image-link" href="/assets/think-deeper-mobile-adaptation.png" target="_blank" rel="noopener noreferrer">View full mobile design <span class="sr-only">(opens in a new tab)</span></a>
+            </figure>
+            <p>On phones, the exploration uses a “See my thinking” entry to open a separate sheet for the process explanation. Scrolling reveals source details and a comparison table without squeezing desktop columns into the phone layout.</p>
+          </div>
+        </section>
+
+        <section id="outcome" class="story-section outcome-section">
+          <p class="eyebrow">04 / The outcome</p>
+          <h2>The team chose the side-by-side direction.</h2>
+          <p>The team adopted my recommendation. During rollout, the work also helped the Think Deeper squad coordinate with related teams.</p>
+          <p>I learned to keep the answer as the main focus, with the explanation close at hand for anyone who wants to review it.</p>
+        </section>
+      </div>
+    </div>
+    <div class="case-closing"><a class="text-link case-return" href="/#work"><span class="case-return-arrow" aria-hidden="true">←</span><span>Back to selected work</span></a><a href="mailto:tsonglee@qq.com">Discuss the work</a></div>
+  </main>
+  <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Think Deeper</span><span>Microsoft Copilot · Case study</span><a href="#main">Back to top</a></footer>
+</body>
+</html>

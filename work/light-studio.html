@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Tsong Li led design on Light Studio / Tencent Effect, organizing a complex creator workflow around familiar workspace regions, meaningful groups, and in-context preview.">
+  <title>Light Studio / Tencent Effect: Tsong Li Portfolio - V1</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+  </style>
+  <script src="/language-init.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/translations.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Tsong Li, home">Tsong Li<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/resume.html">Resume</a><a href="/#contact">Contact</a></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-breadcrumb"><a class="case-return" href="/#earlier-work"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">Creative-production tool</span></div>
+      <h1 id="case-title">Light Studio / Tencent Effect: make technical setup feel like creative work<span class="accent-text">.</span></h1>
+      <p class="case-principle">Organize a complex effect-production workflow around the way creative teams build, adjust, and preview their work.</p>
+      <dl class="case-facts" aria-label="At a glance">
+        <div><dt>Product</dt><dd>Light Studio / Tencent Effect</dd></div>
+        <div><dt>Context</dt><dd>Desktop effect-production tool connected to the Wesee ecosystem</dd></div>
+        <div><dt>My role</dt><dd>Design team lead</dd></div>
+        <div><dt>Focus</dt><dd>Workspace structure, effect grouping, selection recovery, and preview</dd></div>
+      </dl>
+    </section>
+
+    <div class="case-story">
+      <aside class="case-contents">
+        <p class="eyebrow">In this case</p>
+        <nav aria-label="Case contents">
+          <a href="#workflow">01 / Start with the working reality</a>
+          <a href="#workspace">02 / Build a familiar workspace</a>
+          <a href="#structure">03 / Put technical relationships in human terms</a>
+          <a href="#preview">04 / Recover context and preview</a>
+          <a href="#delivery">05 / What the work made possible</a>
+        </nav>
+      </aside>
+      <div class="story-sections">
+        <section id="workflow" class="story-section">
+          <p class="eyebrow">01 / Start with the working reality</p>
+          <h2>Creative production crossed too many handoffs.</h2>
+          <p>Effect production involved creative work, technical configuration, and operations. Designers exchanged files, edited JSON to tune effects, and used a complex content-management system. These steps could distract from the creative work.</p>
+          <p>I led the design team on Light Studio / Tencent Effect, a production tool for the Wesee ecosystem. We needed to make the workflow easier to understand while keeping the technical relationships behind each effect visible.</p>
+        </section>
+
+        <section id="workspace" class="story-section">
+          <p class="eyebrow">02 / Build a familiar workspace</p>
+          <h2>Give each kind of work a place people can recognize.</h2>
+          <p>We drew on established creative tools to give tools and layers, the scene, parameters, timeline, resources, and preview stable places in the workspace. Different creative disciplines could recognize these regions, which left room for the range of effect work the tool needed to support.</p>
+          <figure class="project-figure">
+          <div class="feature-stage" role="img" aria-label="Workspace schematic showing familiar regions for tools and layers, scene operations, parameters, timeline, resources, and preview.">
+            <div class="figure-topline"><span>A stable workspace for a changing set of tasks</span><span class="recommend-label">Workspace schematic</span></div>
+            <div class="mini-workspace">
+              <div class="mini-prompt">Keep the creative workspace legible as projects grow.</div>
+              <div class="mini-split">
+                <div class="mini-answer">
+                  <span class="mini-label">Create and organize</span>
+                  <h4>Work in familiar regions.</h4>
+                  <div class="brief-outline">
+                    <span><b>01</b> Tools, layers, and resources</span>
+                    <span><b>02</b> Scene and parameters</span>
+                    <span><b>03</b> Timeline and preview</span>
+                  </div>
+                </div>
+                <div class="mini-process">
+                  <span class="mini-label">Support iteration</span>
+                  <h4>Keep the work in context.</h4>
+                  <ol class="process-list">
+                    <li>Adjust a creative element</li>
+                    <li>Recover its selection across panels</li>
+                    <li>Preview the effect in context</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption>Workspace schematic · Not a product screenshot</figcaption>
+          </figure>
+        </section>
+
+        <section id="structure" class="story-section">
+          <p class="eyebrow">03 / Put technical relationships in human terms</p>
+          <h2>Let creators work with effects, not renderer vocabulary.</h2>
+          <p>Effects could contain nested, rendered assets, whose relationships were hard to understand in generic folders. We explored connected nodes and hierarchical groups, using names such as effects, probability, transitions, and stickers. The aim was to help creators organize their work without requiring renderer terminology.</p>
+        </section>
+
+        <section id="preview" class="story-section">
+          <p class="eyebrow">04 / Recover context and preview</p>
+          <h2>Keep people oriented as they move between tools.</h2>
+          <p>During long editing sessions, creators could lose track of the selected element. We worked on showing the corresponding selection across panels so they could return to it without searching again.</p>
+          <p>LightFlow, the companion to Light Studio, also provided phone previews. Creators could check an effect in a more relevant setting while continuing to work on it.</p>
+        </section>
+
+        <section id="delivery" class="story-section outcome-section">
+          <p class="eyebrow">05 / What the work made possible</p>
+          <h2>Reduce the translation between creative intent and configuration.</h2>
+          <p>A video designer reported being able to adjust effects without editing JSON directly. This was a concrete example of the intended change: less time spent manually translating a creative idea into technical settings.</p>
+          <p>The case combined workspace structure, clear effect relationships, selection recovery, and previews in context, giving creators a more familiar way to work with the technical complexity that remained.</p>
+        </section>
+      </div>
+    </div>
+    <div class="case-closing"><a class="text-link case-return" href="/#light-studio"><span class="case-return-arrow" aria-hidden="true">←</span><span>Back to selected work</span></a><a href="/work/think-deeper.html">Next case / Think Deeper</a></div>
+  </main>
+  <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Light Studio / Tencent Effect</span><span>Tencent · Case study</span><a href="#main">Back to top</a></footer>
+</body>
+</html>

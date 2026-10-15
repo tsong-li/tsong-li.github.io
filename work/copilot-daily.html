@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Copilot Daily design work by Tsong Li on web playback cues, scrolling transcript subtitles, and responsive layouts. Reported after rollout: playback duration increased by 214% and first-chapter playback bounce decreased by 49%.">
+  <title>Copilot Daily: Tsong Li Portfolio - V1</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+  </style>
+  <script src="/language-init.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/translations.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Tsong Li, home">Tsong Li<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/resume.html">Resume</a><a href="/#contact">Contact</a></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-breadcrumb"><a class="case-return" href="/#copilot-content-finance"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">Copilot Daily · Briefing design</span></div>
+      <h1 id="case-title">Copilot Daily: make quiet playback clear<span class="accent-text">.</span></h1>
+      <p class="case-principle">When enabling sound requires a user action, show the mute state and playback progress clearly.</p>
+      <dl class="case-facts" aria-label="At a glance">
+        <div><dt>Product</dt><dd>Microsoft Copilot Daily</dd></div>
+        <div><dt>Contribution</dt><dd>Web playback guidance and transcript progress</dd></div>
+        <div><dt>Focus</dt><dd>Mute state, sound-on guidance, and scrolling subtitles</dd></div>
+        <div><dt>Design question</dt><dd>How can people tell that playback is underway when the sound is off?</dd></div>
+      </dl>
+    </section>
+
+    <figure class="daily-listening-figure">
+      <img src="/assets/copilot-daily-listening-views-1600.webp" srcset="/assets/copilot-daily-listening-views-800.webp 800w, /assets/copilot-daily-listening-views-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px" width="3840" height="2160" decoding="async" alt="Desktop and mobile Copilot Daily listening views with briefing text, source labels, playback controls, and a message field; the mobile view also shows an AI fallibility notice and position indicators.">
+      <a class="daily-image-link" href="/assets/copilot-daily-listening-views.png">View full-size design image</a>
+      <figcaption>Copilot Daily listening-view design. The displayed date and sample copy are illustrative.</figcaption>
+    </figure>
+
+    <div class="case-story">
+      <aside class="case-contents">
+        <p class="eyebrow">In this case</p>
+        <nav aria-label="Case contents">
+          <a href="#commitment">01 / When playback seemed inactive</a>
+          <a href="#listening">02 / Make sound and progress visible</a>
+          <a href="#reflection">03 / Results after rollout</a>
+        </nav>
+      </aside>
+      <div class="story-sections">
+        <section id="commitment" class="story-section">
+          <p class="eyebrow">01 / When playback seemed inactive</p>
+          <h2>A silent start could feel like no start.</h2>
+          <p>On the web, browser restrictions could let playback begin silently until the user took action to enable sound. Without a transcript or progress feedback, people had little indication that it was playing and could leave thinking nothing had happened.</p>
+          <p>The player needed to show whether sound was on and make it clear that the briefing was already playing.</p>
+        </section>
+
+        <section id="listening" class="story-section">
+          <p class="eyebrow">02 / Make sound and progress visible</p>
+          <h2>Show that listening has started, even when it is quiet.</h2>
+          <p>I shipped two changes. I repositioned the player buttons to make the mute and unmute controls prominent, with tips explaining the muted state and the action needed to enable sound. I also added scrolling transcript subtitles so people could see that playback had started and follow its progress.</p>
+          <figure class="daily-player-figure">
+            <img src="/assets/copilot-daily-web-playback-guidance-2560.webp" srcset="/assets/copilot-daily-web-playback-guidance-1280.webp 1280w, /assets/copilot-daily-web-playback-guidance-2560.webp 2560w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px" width="10008" height="2800" loading="lazy" decoding="async" alt="Three Copilot Daily web player designs exploring a prominent mute control and tooltip guidance explaining the user action needed to enable sound.">
+            <a class="daily-image-link" href="/assets/copilot-daily-web-playback-guidance.png">View full-size player designs</a>
+            <figcaption>Web player designs exploring prominent mute controls and guidance for enabling sound.</figcaption>
+          </figure>
+          <p>The wider listening experience keeps sources visible on desktop and includes an AI fallibility notice on mobile. Per-chapter transcripts also shipped, allowing people to read each chapter while listening.</p>
+          <figure class="daily-adaptation-figure">
+            <img src="/assets/copilot-daily-light-dark-layouts-2560.webp" srcset="/assets/copilot-daily-light-dark-layouts-1280.webp 1280w, /assets/copilot-daily-light-dark-layouts-2560.webp 2560w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px" width="5004" height="1400" loading="lazy" decoding="async" alt="Copilot Daily desktop layouts showing a dark theme and light theme layouts with different text lengths.">
+            <a class="daily-image-link" href="/assets/copilot-daily-light-dark-layouts.png">View full-size light and dark layouts</a>
+            <figcaption>Light and dark desktop layouts across shorter and longer text.</figcaption>
+          </figure>
+          <p>The supporting layouts adapt to different screen sizes, themes, and text lengths.</p>
+          <figure class="daily-adaptation-figure">
+            <img src="/assets/copilot-daily-responsive-layouts-2560.webp" srcset="/assets/copilot-daily-responsive-layouts-1280.webp 1280w, /assets/copilot-daily-responsive-layouts-2560.webp 2560w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px" width="10008" height="2800" loading="lazy" decoding="async" alt="Responsive Copilot Daily designs from a narrow mobile view through wider desktop layouts, retaining playback controls at each size.">
+            <a class="daily-image-link" href="/assets/copilot-daily-responsive-layouts.png">View full-size responsive layouts</a>
+            <figcaption>Responsive listening layouts from mobile to desktop.</figcaption>
+          </figure>
+        </section>
+
+        <section id="reflection" class="story-section outcome-section">
+          <p class="eyebrow">03 / Results after rollout</p>
+          <h2>Playback duration rose as first-chapter bounce fell.</h2>
+          <p>After rollout, playback duration increased by 214%, while first-chapter playback bounce decreased by 49%.</p>
+          <p class="daily-metric-note">These figures were reported after the combined changes rolled out. No baseline, measurement period, or attribution to individual features was provided.</p>
+          <p>The results supported making a silent start easier to recognize, with a visible mute state and clear signs that the briefing was progressing.</p>
+        </section>
+      </div>
+    </div>
+    <div class="case-closing"><a class="text-link case-return" href="/#copilot-daily"><span class="case-return-arrow" aria-hidden="true">←</span><span>Back to selected work</span></a><a href="/work/newsflow.html">Next case / Newsflow</a></div>
+  </main>
+  <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Copilot Daily</span><span>Microsoft Copilot · Case study</span><a href="#main">Back to top</a></footer>
+</body>
+</html>

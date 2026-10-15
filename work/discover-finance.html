@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Tsong Li delivered the final desktop and mobile design for Copilot Discover Finance, alongside a separately shipped personalized Finance insight card.">
+  <title>Discover Finance: a delivered feed design</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+  </style>
+  <script src="/language-init.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/translations.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body class="case-page discover-case">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Tsong Li, home">Tsong Li<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/resume.html">Resume</a><a href="/#contact">Contact</a></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-breadcrumb"><a class="case-return" href="/#work"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">02 / Financial content experience</span></div>
+      <h1 id="case-title">Discover Finance: a delivered design for timely market context<span class="accent-text">.</span></h1>
+      <p class="case-principle">Financial news moves quickly. The challenge is to help readers understand what happened, why it happened, and why it matters now.</p>
+      <dl class="case-facts" aria-label="At a glance">
+        <div><dt>Product</dt><dd>Microsoft Copilot Discover</dd></div>
+        <div><dt>Portfolio context</dt><dd>2025–2026</dd></div>
+        <div><dt>Feed design</dt><dd>2026</dd></div>
+        <div><dt>Focus</dt><dd>Finance feed design for Copilot Discover across desktop and mobile</dd></div>
+        <div><dt>Status</dt><dd>Finance insight card shipped; final feed design delivered</dd></div>
+      </dl>
+    </section>
+
+    <figure class="discover-hero-figure discover-final-figure">
+      <img class="discover-final-image" src="/assets/discover-finance-feed-final-1600.webp" srcset="/assets/discover-finance-feed-final-800.webp 800w, /assets/discover-finance-feed-final-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px" width="3840" height="2160" decoding="async" alt="Final Finance feed design: a desktop feed alongside mobile market-brief and stock-event views">
+      <a class="discover-final-fullsize" href="/assets/discover-finance-feed-final.png">View full-size design image</a>
+      <figcaption>Final delivered design: desktop Finance feed and mobile market-brief and stock-event views. Market figures are illustrative, not live data.</figcaption>
+    </figure>
+
+    <div class="case-story">
+      <aside class="case-contents">
+        <p class="eyebrow">In this case</p>
+        <nav aria-label="Case contents"><a href="#challenge">01 / The challenge</a><a href="#structure">02 / A shared editorial structure</a><a href="#directions">03 / Relevance across the experience</a><a href="#mobile-cards">04 / Mobile views preserve the story</a><a href="#delivery">05 / Delivery and takeaway</a></nav>
+      </aside>
+      <div class="story-sections">
+        <section id="challenge" class="story-section">
+          <p class="eyebrow">01 / The challenge</p>
+          <h2>Financial signals move quickly; meaning takes work to connect.</h2>
+          <p>Market movements, company news, and personal context often arrive separately. Readers have to connect them to understand what happened, why it happened, and why it matters now.</p>
+          <p>The final design combined a personalized desktop feed with focused mobile views. It connected market movements, company events, and their context so readers could follow the relationships between headlines.</p>
+        </section>
+
+        <section id="structure" class="story-section">
+          <p class="eyebrow">02 / A shared editorial structure</p>
+          <h2>One sequence, tuned to each view.</h2>
+          <p>I organized the content around three questions: what happened, why it happened, and why it matters now. The same sequence could guide a market-wide brief, a personalized summary, or coverage of an individual company event.</p>
+          <p>The desktop feed opened with a personalized introduction, with market indices and company coverage side by side. The mobile market brief brought general and personalized index context into a focused view, following the same sequence: what happened, why, and why now.</p>
+          <figure class="discover-motion-figure">
+            <video class="discover-motion-video" controls playsinline muted preload="none" poster="/assets/discover-market-brief-poster.jpg" width="3456" height="2168" aria-label="Mobile market-brief views, general and personalized, showing index summaries, charts, and context">
+              <source src="/assets/discover-market-brief-motion.mp4" type="video/mp4">
+            </video>
+            <a class="discover-motion-source" href="/assets/discover-market-brief-motion.mp4">Open market-brief video in browser</a>
+            <figcaption>Mobile market brief: a short silent recording of general and personalized views, with index summaries, charts, and explanatory context. Figures are illustrative, not live data.</figcaption>
+          </figure>
+          <p>Separating the event, its explanation, and its relevance helps readers follow fast-moving financial information. The aim is to help people understand a development without telling them what financial decision to make.</p>
+        </section>
+
+        <section id="directions" class="story-section">
+          <p class="eyebrow">03 / Relevance across the experience</p>
+          <h2>Personal relevance depends on context and timing.</h2>
+          <p>The design used a personalized introduction and separate views for market context and company events to show their relevance to the reader. The broader direction also considered Discover memory, explicit curation, and query analysis as possible ways to select relevant content. Because financial events change quickly, each view needed to explain why a development mattered now and avoid repeating details from other views.</p>
+          <dl class="format-directions">
+            <div><dt>Feed</dt><dd>Introduce the event and why it matters, using a clear hierarchy so readers can scan for the main point.</dd></div>
+            <div><dt>Detail</dt><dd>Expand on the event and its context, adding to what readers saw in the feed.</dd></div>
+            <div><dt>Connected dashboard</dt><dd>In the broader design direction, connect individual updates to the wider financial picture so each view adds context instead of repeating another.</dd></div>
+          </dl>
+          <p>I drew on the clarity, scan-friendly hierarchy, and restraint of Bloomberg-style financial reporting. I used those qualities as a reference for helping readers stay oriented and confident, without copying the format.</p>
+        </section>
+
+        <section id="mobile-cards" class="story-section">
+          <p class="eyebrow">04 / Mobile views preserve the story</p>
+          <h2>Keep the same information logic at a smaller scale.</h2>
+          <p>In the layout review, I compared two independent choices: grouping market and company updates together or separating them in the introduction, and combining stock updates in one card or giving each its own card. The four combinations show the trade-offs. One introductory group reads as a continuous update; two distinguish market context from company news. A combined card keeps companies together, while separate cards give each company a clear boundary so readers can scan one at a time.</p>
+          <div class="discover-layout-exploration" role="group" aria-label="Four mobile card-layout variants">
+            <dl class="discover-layout-axes">
+              <dt>Intro grouping</dt><dd>One group or two</dd>
+              <dt>Stock cards</dt><dd>Combined or separate</dd>
+            </dl>
+            <div class="discover-layout-grid">
+              <figure class="discover-layout-variant">
+                <img src="/assets/discover-card-layout-one-group-combined.png" width="920" height="2936" loading="lazy" decoding="async" alt="One intro group followed by a combined card containing the market brief and stock updates">
+                <figcaption><span>One group</span><span>Combined cards</span></figcaption>
+              </figure>
+              <figure class="discover-layout-variant">
+                <img src="/assets/discover-card-layout-two-groups-combined.png" width="925" height="2936" loading="lazy" decoding="async" alt="Two intro groups separating the market brief from stock updates in one combined card">
+                <figcaption><span>Two groups</span><span>Combined cards</span></figcaption>
+              </figure>
+              <figure class="discover-layout-variant">
+                <img src="/assets/discover-card-layout-one-group-separated.png" width="926" height="2936" loading="lazy" decoding="async" alt="One intro group followed by separate market-brief and stock-update cards">
+                <figcaption><span>One group</span><span>Separate cards</span></figcaption>
+              </figure>
+              <figure class="discover-layout-variant">
+                <img src="/assets/discover-card-layout-two-groups-separated.png" width="919" height="2936" loading="lazy" decoding="async" alt="Two intro groups with separate market-brief and stock-update cards">
+                <figcaption><span>Two groups</span><span>Separate cards</span></figcaption>
+              </figure>
+            </div>
+            <p class="discover-layout-caption">Four visual combinations across two choices: one or two intro groups, with stock updates combined or separate. These are layout alternatives, not user-test results. Market figures are illustrative.</p>
+          </div>
+          <div class="discover-layout-links">
+            <a href="/assets/discover-mobile-card-layout-exploration.png">View full four-variant comparison</a>
+            <a href="https://www.figma.com/design/9VgXijoGldIkSpa2AFxb0D/Feb.-10-One-Group-Design?node-id=2244-102675&amp;m=dev" target="_blank" rel="noopener noreferrer" aria-label="View source in Figma, opens in a new tab"><span>View source in Figma</span><span class="sr-only">Opens in a new tab</span></a>
+          </div>
+          <p>For the delivered design, I kept one card per stock to fit the existing feed framework, where each card represents one content item. On mobile, I removed nonessential titles and shortened descriptions to fit that structure.</p>
+          <figure class="discover-motion-figure">
+            <video class="discover-motion-video" controls playsinline muted preload="none" poster="/assets/discover-stock-update-poster.jpg" width="3680" height="2392" aria-label="Mobile stock-update cards showing company, price movement, event explanations, and sources">
+              <source src="/assets/discover-stock-update-motion.mp4" type="video/mp4">
+            </video>
+            <a class="discover-motion-source" href="/assets/discover-stock-update-motion.mp4">Open stock-update video in browser</a>
+            <figcaption>Mobile stock update: a short silent recording of stacked company cards with price movement, event summaries, and sources. Figures are illustrative, not live data.</figcaption>
+          </figure>
+        </section>
+
+        <section id="delivery" class="story-section outcome-section">
+          <p class="eyebrow">05 / Delivery and takeaway</p>
+          <h2>A shipped insight card and a delivered feed design.</h2>
+          <dl class="delivery-status">
+            <div><dt>Shipped</dt><dd>I designed and shipped a Finance insight card that presents personalized financial highlights in Discover.</dd></div>
+            <div><dt>Delivered design</dt><dd>I delivered the final desktop and mobile Finance feed design shown above. This confirms design delivery, not launch of the complete Finance feed.</dd></div>
+          </dl>
+          <p>Both the shipped insight card and the delivered feed design addressed the same question: how can scattered financial signals become timely, understandable context without prescribing a financial decision?</p>
+        </section>
+      </div>
+    </div>
+    <div class="case-closing"><a class="text-link case-return" href="/#discover-finance"><span class="case-return-arrow" aria-hidden="true">←</span><span>Back to selected work</span></a><a href="/work/think-deeper.html">Next case / Think Deeper</a></div>
+  </main>
+  <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Discover Finance</span><span>Microsoft Copilot · Case study</span><a href="#main">Back to top</a></footer>
+</body>
+</html>

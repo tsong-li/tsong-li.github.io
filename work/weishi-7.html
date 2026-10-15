@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Tsong Li led the Wesee 7.0 design team in shaping a progressive mobile video editor, validating text timing, and balancing simple music selection with advanced controls.">
+  <title>Wesee 7.0: Tsong Li Portfolio - V1</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+  </style>
+  <script src="/language-init.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/translations.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Tsong Li, home">Tsong Li<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/resume.html">Resume</a><a href="/#contact">Contact</a></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-breadcrumb"><a class="case-return" href="/#earlier-work"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">Wesee 7.0 · Video publishing</span></div>
+      <h1 id="case-title">Wesee 7.0: a video editor that opens up in stages<span class="accent-text">.</span></h1>
+      <p class="case-principle">Keep everyday editing approachable, while giving creators a clear path to more precise control.</p>
+      <dl class="case-facts" aria-label="At a glance">
+        <div><dt>Product</dt><dd>Tencent Wesee 7.0</dd></div>
+        <div><dt>My role</dt><dd>Design team lead for the video publishing experience</dd></div>
+        <div><dt>Focus</dt><dd>Progressive editing, text timing, and music controls</dd></div>
+        <div><dt>Approach</dt><dd>Team design decisions guided by task validation</dd></div>
+      </dl>
+    </section>
+
+    <div class="case-story">
+      <aside class="case-contents">
+        <p class="eyebrow">In this case</p>
+        <nav aria-label="Case contents">
+          <a href="#range">01 / Different levels of editing</a>
+          <a href="#framework">02 / Open the editor in stages</a>
+          <a href="#text">03 / Make timing the next step</a>
+          <a href="#music">04 / Keep music control flexible</a>
+        </nav>
+      </aside>
+      <div class="story-sections">
+        <section id="range" class="story-section">
+          <p class="eyebrow">01 / Different levels of editing</p>
+          <h2>One publishing flow had to serve very different habits.</h2>
+          <p>Some people wanted to make a quick everyday video; others wanted precise control over text, effects, and timing. Putting every control on the same level could overwhelm the first group or constrain the second.</p>
+          <p>I led the design team in finding a structure for both: a clear basic publishing path, with more advanced tools available when the task required them.</p>
+        </section>
+
+        <section id="framework" class="story-section">
+          <p class="eyebrow">02 / Open the editor in stages</p>
+          <h2>Keep the first steps focused, then reveal more craft.</h2>
+          <p>We organized editing into three levels. The first two covered the core tasks for simpler videos; the third offered advanced controls. Across these levels, we reused three panel patterns: editor home, selection, and track or timeline.</p>
+          <figure class="project-figure">
+          <div class="feature-stage" role="img" aria-label="Wesee editing framework schematic: level one for core publishing, level two for text, stickers, and effects, and level three for timeline and fade controls, using recurring home, selection, and track panels.">
+            <div class="figure-topline"><span>Progressive depth, not one crowded screen</span><span class="recommend-label">Framework schematic</span></div>
+            <div class="mini-workspace">
+              <div class="mini-prompt">The level of control follows the task.</div>
+              <div class="mini-split">
+                <div class="mini-answer">
+                  <span class="mini-label">Editing depth</span>
+                  <h4>Start simply. Go deeper.</h4>
+                  <div class="brief-outline">
+                    <span><b>01</b> Core publishing</span>
+                    <span><b>02</b> Text, stickers, and effects</span>
+                    <span><b>03</b> Timeline and fades</span>
+                  </div>
+                </div>
+                <div class="mini-process">
+                  <span class="mini-label">Recurring panels</span>
+                  <h4>Keep the structure familiar.</h4>
+                  <ol class="process-list">
+                    <li>Editor home</li>
+                    <li>Selection panel</li>
+                    <li>Track or timeline panel</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption>Interaction framework schematic · Not a product screenshot</figcaption>
+          </figure>
+        </section>
+
+        <section id="text" class="story-section">
+          <p class="eyebrow">03 / Make timing the next step</p>
+          <h2>Adding text was not the end of the task.</h2>
+          <p>In the earlier flow, users returned to the editor home after adding text, where timing controls were harder to find. Task validation showed that they expected to adjust duration immediately after entering text.</p>
+          <p>We made text entry lead directly to duration adjustment, then applied the same interaction to stickers and effects, where creators might also need to set when an element appears.</p>
+        </section>
+
+        <section id="music" class="story-section outcome-section">
+          <p class="eyebrow">04 / Keep music control flexible</p>
+          <h2>Make the simple choice familiar; leave room for precision.</h2>
+          <p>For basic music selection, we replaced a hard-to-discover waveform gesture with a familiar progress bar. Timeline editing and fades remained available for more precise control, while lyric feedback helped users locate a passage as they adjusted a music segment.</p>
+          <p>An approachable first action let people finish a simple edit, while a more precise set of tools remained available when they needed it.</p>
+        </section>
+      </div>
+    </div>
+    <div class="case-closing"><a class="text-link case-return" href="/#weishi-7"><span class="case-return-arrow" aria-hidden="true">←</span><span>Back to selected work</span></a><a href="/work/light-studio.html">Next case / Light Studio</a></div>
+  </main>
+  <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Wesee 7.0</span><span>Tencent · Case study</span><a href="#main">Back to top</a></footer>
+</body>
+</html>
