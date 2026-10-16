@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Multilingual typography work by Tsong Li at Microsoft: Chinese font selection, page comparisons, collaboration with Windows, Office, and Edge, and font fallback guidance.">
+  <title>Microsoft Chinese Typography: Tsong Li Portfolio</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --cp-bg: #f7f4ef;
+      --cp-bg-elevated: #fcfbf8;
+      --cp-surface: #ffffff;
+      --cp-surface-soft: #f5f5f5;
+      --cp-border: #dedede;
+      --cp-border-strong: #919191;
+      --cp-text: #242424;
+      --cp-text-muted: #5c5c5c;
+      --cp-text-soft: #6f6f6f;
+      --cp-accent: #b11f4b;
+      --cp-accent-hover: #9a1a41;
+      --cp-accent-soft: rgba(177, 31, 75, 0.08);
+      --cp-accent-fg: #ffffff;
+      --cp-success: #16a34a;
+      --cp-danger: #dc2626;
+      --cp-warning: #f59e0b;
+      --cp-link: #0078d4;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+      --cp-overlay: rgba(255, 255, 255, 0.8);
+      --cp-panel: rgba(255, 255, 255, 0.86);
+      --cp-panel-strong: rgba(255, 255, 255, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.55);
+      --cp-highlight: rgba(177, 31, 75, 0.12);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --cp-bg: #3d3b3a;
+      --cp-bg-elevated: #343231;
+      --cp-surface: #292929;
+      --cp-surface-soft: #2e2e2e;
+      --cp-border: #474747;
+      --cp-border-strong: #5f5f5f;
+      --cp-text: #dedede;
+      --cp-text-muted: #919191;
+      --cp-text-soft: #b0b0b0;
+      --cp-accent: #fd8ea1;
+      --cp-accent-hover: #fb7b91;
+      --cp-accent-soft: rgba(253, 142, 161, 0.14);
+      --cp-accent-fg: #1a1a1a;
+      --cp-success: #4ade80;
+      --cp-danger: #f87171;
+      --cp-warning: #fbbf24;
+      --cp-link: #4da6ff;
+      --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+      --cp-overlay: rgba(41, 41, 41, 0.88);
+      --cp-panel: rgba(41, 41, 41, 0.72);
+      --cp-panel-strong: rgba(41, 41, 41, 0.96);
+      --cp-sheen: rgba(255, 255, 255, 0.04);
+      --cp-highlight: rgba(253, 142, 161, 0.12);
+    }
+  </style>
+  <script src="/language-init.js"></script>
+  <link rel="stylesheet" href="/styles.css?v=chinese-typography-20261016">
+  <script src="/translations.js?v=chinese-typography-20261016" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body class="case-page typography-case">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Tsong Li, home">Tsong Li<span class="wordmark-dot" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/resume.html">Resume</a><a href="/#contact">Contact</a></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-breadcrumb"><a class="case-return" href="/#chinese-typography"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">Microsoft · Internationalization</span></div>
+      <h1 id="case-title">Localizing Microsoft’s typography for Chinese<span class="accent-text">.</span></h1>
+      <p class="case-principle">I developed multilingual typography proposals, coordinated Chinese font-switching plans across product teams, and helped designers work with language-specific font behavior.</p>
+      <dl class="case-facts" aria-label="At a glance">
+        <div><dt>Context</dt><dd>Microsoft internationalization</dd></div>
+        <div><dt>My role</dt><dd>Typography design and font fallback guidance</dd></div>
+        <div><dt>Collaboration</dt><dd>Windows, Office, and Edge teams</dd></div>
+        <div><dt>Focus</dt><dd>Chinese font selection and multilingual design education</dd></div>
+      </dl>
+    </section>
+    <figure class="typography-visual typography-overview" id="design-overview"><picture><source type="image/webp" srcset="/assets/microsoft-chinese-typography-hero-800.webp 800w, /assets/microsoft-chinese-typography-hero-1600.webp 1600w, /assets/microsoft-chinese-typography-hero-2400.webp 2400w, /assets/microsoft-chinese-typography-hero-3840.webp 3840w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px"><img src="/assets/microsoft-chinese-typography-hero.png" width="3840" height="2160" loading="eager" decoding="async" alt="Orange typographic artwork combining the word Font with layered Chinese character strokes."></picture></figure>
+
+    <div class="case-story">
+      <aside class="case-contents">
+        <p class="eyebrow">In this case</p>
+        <nav aria-label="Case contents">
+          <a href="#diagnosis">01 / Understand the mismatch</a>
+<a href="#font-pairing">02 / Choose the pairing</a>
+<a href="#page-comparisons">03 / Compare in context</a>
+<a href="#font-switch">04 / Coordinate the switch</a>
+<a href="#team-guidance">05 / Share the principles</a>
+        </nav>
+      </aside>
+      <div class="story-sections">
+        <section id="diagnosis" class="story-section" aria-labelledby="diagnosis-title">
+          <p class="eyebrow">01 / Understand the mismatch</p>
+          <h2 id="diagnosis-title">Matching numbers can produce very different type.</h2>
+          <p>Chinese text in Discover Feeds needed to work alongside Ginto. Using the same size, weight, and line height across scripts could leave Chinese headings looking heavy, paragraphs crowded, and mixed text unevenly aligned.</p><p>I examined weight, apparent character size, line height, letter spacing, and baseline alignment. Comparisons of characters, phrases, and paragraphs helped turn those visual differences into specific design decisions.</p>
+        </section>
+<section id="font-pairing" class="story-section" aria-labelledby="font-pairing-title">
+          <p class="eyebrow">02 / Choose the pairing</p>
+          <h2 id="font-pairing-title">Choose the font and its settings together.</h2>
+          <p>I explored adjustments to Microsoft YaHei, then compared it with Noto Sans SC alongside Ginto. The study considered whether a broader choice of weights and different glyph proportions could produce a more balanced pairing.</p><p>The design proposal used Noto Sans SC and considered different spacing needs for interface labels, summaries, and body text. The aim was to support both quick scanning and longer reading.</p>
+        </section>
+<section id="page-comparisons" class="story-section" aria-labelledby="page-comparisons-title">
+          <p class="eyebrow">03 / Compare in context</p>
+          <h2 id="page-comparisons-title">See how the type works across a whole page.</h2>
+          <p>I brought the typography choices back into Discover Feeds and article layouts. The before-and-after designs show how the changes affect card headings, source labels, article titles, body text, and Chinese–Latin text within the same line.</p><figure class="typography-evidence">
+            <picture><source type="image/webp" srcset="/assets/microsoft-typography-feeds-before-960.webp 960w, /assets/microsoft-typography-feeds-before-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-feeds-before.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Discover Feeds before the typography adjustment, with heavier Chinese card headings."></picture>
+            <figcaption>Discover Feeds / Before</figcaption>
+            <a class="case-image-link" href="/assets/microsoft-typography-feeds-before.png" target="_blank" rel="noopener noreferrer">View full-size design image <span class="sr-only">(opens in a new tab)</span></a>
+          </figure><figure class="typography-evidence">
+            <picture><source type="image/webp" srcset="/assets/microsoft-typography-feeds-after-960.webp 960w, /assets/microsoft-typography-feeds-after-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-feeds-after.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Discover Feeds after the proposed typography adjustment, showing the revised Chinese headings and labels."></picture>
+            <figcaption>Discover Feeds / After</figcaption>
+            <a class="case-image-link" href="/assets/microsoft-typography-feeds-after.png" target="_blank" rel="noopener noreferrer">View full-size design image <span class="sr-only">(opens in a new tab)</span></a>
+          </figure><figure class="typography-evidence">
+            <picture><source type="image/webp" srcset="/assets/microsoft-typography-article-before-960.webp 960w, /assets/microsoft-typography-article-before-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-article-before.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Article layout before the typography adjustment, including a Chinese headline and mixed Chinese–Latin body text."></picture>
+            <figcaption>Article page / Before</figcaption>
+            <a class="case-image-link" href="/assets/microsoft-typography-article-before.png" target="_blank" rel="noopener noreferrer">View full-size design image <span class="sr-only">(opens in a new tab)</span></a>
+          </figure><figure class="typography-evidence">
+            <picture><source type="image/webp" srcset="/assets/microsoft-typography-article-after-960.webp 960w, /assets/microsoft-typography-article-after-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-article-after.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Article layout after the proposed typography adjustment, showing changes to the title, metadata, and body text."></picture>
+            <figcaption>Article page / After</figcaption>
+            <a class="case-image-link" href="/assets/microsoft-typography-article-after.png" target="_blank" rel="noopener noreferrer">View full-size design image <span class="sr-only">(opens in a new tab)</span></a>
+          </figure>
+        </section>
+<section id="font-switch" class="story-section" aria-labelledby="font-switch-title">
+          <p class="eyebrow">04 / Coordinate the switch</p>
+          <h2 id="font-switch-title">Connect the design proposal to the product teams.</h2>
+          <p>I developed the multilingual typography proposals and worked with the Windows, Office, and Edge teams on plans to switch Chinese-language experiences to Noto Sans CN, supplied with Windows 11 and Edge.</p><p>I also joined technical discussions with FounderType about updates to Microsoft YaHei’s font weights.</p>
+        </section>
+<section id="team-guidance" class="story-section outcome-section" aria-labelledby="team-guidance-title">
+          <p class="eyebrow">05 / Share the principles</p>
+          <h2 id="team-guidance-title">Give designers a way to reason about multilingual type.</h2>
+          <p>I shared multilingual typography principles with internal design teams and developed font fallback guidance. The sessions explained how writing systems differ, how browsers choose fonts for individual characters, and why the same weight value can look different across fonts.</p><p>The guidance also addressed regional CJK glyph forms and language-specific font choices. It gave teams concrete comparisons to use when evaluating typography in their own interfaces.</p>
+        </section>
+      </div>
+    </div>
+    <div class="case-closing"><a class="text-link case-return" href="/#chinese-typography"><span class="case-return-arrow" aria-hidden="true">←</span><span>Back to selected work</span></a><a href="/work/lark-i18n.html">Next case / Lark internationalization</a></div>
+  </main>
+  <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Chinese Typography</span><span>Microsoft · Case study</span><a href="#main">Back to top</a></footer>
+</body>
+</html>

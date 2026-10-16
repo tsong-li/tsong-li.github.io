@@ -657,3 +657,12 @@ figcaption { color: var(--cp-secondary); font-size: 11px; line-height: 1.6; marg
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+
+/* Microsoft Chinese typography case and its supplied full-frame visual. */
+.typography-visual, .typography-evidence { max-width: 100%; }
+.typography-visual picture, .typography-evidence picture { display: block; width: 100%; }
+.typography-visual img, .typography-evidence img { display: block; width: 100%; max-width: 100%; height: auto; border: 1px solid var(--cp-border); }
+.typography-overview { margin-top: 36px; }
+.typography-evidence { margin-top: 32px; }
+.typography-evidence figcaption { color: var(--cp-text-muted); font-size: 12px; line-height: 1.7; margin-top: 12px; }
