@@ -1,4 +1,6 @@
 window.portfolioTranslations = {
+  "Phone": "电话",
+  "WeChat": "微信",
   "Password required": "需密码访问",
   "Enter the password to view my selected work and case studies.": "输入密码，查看我的精选作品与完整案例。",
   "View selected work": "查看精选作品",
@@ -962,7 +964,7 @@ window.portfolioTranslationInvariants = [
   "Copilot Deep Research", "Copilot Discover Finance Feed", "Copilot Personal Finance",
   "Copilot Daily", "Newsflow", "Discover", "Deep Research", "Think Deeper", "Temporary Chat",
   "Personal Finance", "Discover Finance", "Tax CTI", "Light Studio / Tencent Effect",
-  "LinkedIn", "tsonglee@qq.com", "Aa", "EN", "DE", "JA", "0.5u", "1u",
+  "LinkedIn", "tsonglee@qq.com", "unowen", "Aa", "EN", "DE", "JA", "0.5u", "1u",
   "Create a workspace", "Arbeitsbereich", "erstellen", "ワークスペースを作成"
 ];
 
