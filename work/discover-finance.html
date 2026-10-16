@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How Tsong Li delivered the final desktop and mobile design for Copilot Discover Finance, alongside a separately shipped personalized Finance insight card.">
-  <title>Discover Finance: a delivered feed design</title>
+  <meta name="description" content="How Tsong Li connected proactive finance content to users’ interests and explored a consistent stock-card structure across desktop and mobile.">
+  <title>Discover Finance: making proactive updates feel relevant</title>
   <script>
     (() => {
       const param = new URLSearchParams(window.location.search).get("scoutTheme");
@@ -68,8 +68,8 @@
     }
   </style>
   <script src="/language-init.js"></script>
-  <link rel="stylesheet" href="/styles.css?v=visitor-access-20261016b">
-  <script src="/translations.js?v=visitor-access-20261016b" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=finance-review-20261016">
+  <script src="/translations.js?v=finance-review-20261016" defer></script>
   <script src="/access.js?v=visitor-access-20261016b" defer></script>
   <script src="/app.js?v=visitor-access-20261016b" defer></script>
 </head>
@@ -95,41 +95,49 @@
 <main id="protected-main" class="wrap">
     <section class="case-hero" aria-labelledby="case-title">
       <div class="case-breadcrumb"><a class="case-return" href="/#work"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">02 / Financial content experience</span></div>
-      <h1 id="case-title">Discover Finance: a delivered design for timely market context<span class="accent-text">.</span></h1>
-      <p class="case-principle">Financial news moves quickly. The challenge is to help readers understand what happened, why it happened, and why it matters now.</p>
+      <h1 id="case-title">Discover Finance: making proactive updates feel relevant<span class="accent-text">.</span></h1>
+      <p class="case-principle">Help finance updates feel grounded in what the user already follows and cares about.</p>
       <dl class="case-facts" aria-label="At a glance">
         <div><dt>Product</dt><dd>Microsoft Copilot Discover</dd></div>
         <div><dt>Portfolio context</dt><dd>2025–2026</dd></div>
         <div><dt>Feed design</dt><dd>2026</dd></div>
-        <div><dt>Focus</dt><dd>Finance feed design for Copilot Discover across desktop and mobile</dd></div>
-        <div><dt>Status</dt><dd>Finance insight card shipped; final feed design delivered</dd></div>
+        <div><dt>Focus</dt><dd>Personal relevance and stock-card structure across desktop and mobile</dd></div>
       </dl>
     </section>
 
     <figure class="discover-hero-figure discover-final-figure">
-      <img class="discover-final-image" src="/assets/discover-finance-feed-final-1600.webp" srcset="/assets/discover-finance-feed-final-800.webp 800w, /assets/discover-finance-feed-final-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px" width="3840" height="2160" decoding="async" alt="Final Finance feed design: a desktop feed alongside mobile market-brief and stock-event views">
+      <img class="discover-final-image" src="/assets/discover-finance-feed-final-1600.webp" srcset="/assets/discover-finance-feed-final-800.webp 800w, /assets/discover-finance-feed-final-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px" width="3840" height="2160" decoding="async" alt="Finance feed design: a desktop feed alongside mobile market-brief and stock-event views">
       <a class="discover-final-fullsize" href="/assets/discover-finance-feed-final.png">View full-size design image</a>
-      <figcaption>Final delivered design: desktop Finance feed and mobile market-brief and stock-event views. Market figures are illustrative, not live data.</figcaption>
+      <figcaption>Finance feed design across desktop and mobile, including market briefs and stock updates. Market figures are illustrative.</figcaption>
     </figure>
 
     <div class="case-story">
       <aside class="case-contents">
         <p class="eyebrow">In this case</p>
-        <nav aria-label="Case contents"><a href="#challenge">01 / The challenge</a><a href="#structure">02 / A shared editorial structure</a><a href="#directions">03 / Relevance across the experience</a><a href="#mobile-cards">04 / Mobile views preserve the story</a><a href="#delivery">05 / Delivery and takeaway</a></nav>
+        <nav aria-label="Case contents"><a href="#challenge">01 / The product question</a><a href="#structure">02 / Make relevance explicit</a><a href="#mobile-cards">03 / Define the content unit</a><a href="#directions">04 / Give depth a purpose</a><a href="#delivery">05 / What carries forward</a></nav>
       </aside>
       <div class="story-sections">
         <section id="challenge" class="story-section">
-          <p class="eyebrow">01 / The challenge</p>
-          <h2>Financial signals move quickly; meaning takes work to connect.</h2>
-          <p>Market movements, company news, and personal context often arrive separately. Readers have to connect them to understand what happened, why it happened, and why it matters now.</p>
-          <p>The final design combined a personalized desktop feed with focused mobile views. It connected market movements, company events, and their context so readers could follow the relationships between headlines.</p>
+          <p class="eyebrow">01 / The product question</p>
+          <h2>Why should finance belong in this feed?</h2>
+          <p>Bringing finance into Discover meant asking people to engage with content they had not explicitly requested in that moment. My first concern was whether a market update would feel connected to their habits and interests.</p>
+          <p>The design needed to make that connection visible before presenting Finance insight and Stock modules. The goal was to reduce resistance to recommended content and create a useful entry into related information and services.</p>
+          <p>Two decisions shaped my work: how introductory copy establishes personal relevance, and whether mobile stock updates should keep the web structure of one stock per card.</p>
         </section>
 
         <section id="structure" class="story-section">
-          <p class="eyebrow">02 / A shared editorial structure</p>
-          <h2>One sequence, tuned to each view.</h2>
-          <p>I organized the content around three questions: what happened, why it happened, and why it matters now. The same sequence could guide a market-wide brief, a personalized summary, or coverage of an individual company event.</p>
-          <p>The desktop feed opened with a personalized introduction, with market indices and company coverage side by side. The mobile market brief brought general and personalized index context into a focused view, following the same sequence: what happened, why, and why now.</p>
+          <p class="eyebrow">02 / Make relevance explicit</p>
+          <h2>Explain why the update is here before asking for attention.</h2>
+          <p>I placed personalized introductory copy before the Finance insight and Stock modules. It connects an update to an interest the user has shown, then explains the development that makes it worth surfacing now.</p>
+          <p>The pitch compares a general market brief with a personalized version. The general view centers on market indices; the personalized view combines market context with companies of interest. The opening message and the explanation change with that selection.</p>
+          <figure class="discover-pitch-figure">
+            <a class="discover-pitch-image-link" href="/assets/discover-pitch-relevance.png" target="_blank" rel="noopener noreferrer" aria-label="View full-size pitch slide, opens in a new tab">
+              <img src="/assets/discover-pitch-relevance-1920.webp" srcset="/assets/discover-pitch-relevance-960.webp 960w, /assets/discover-pitch-relevance-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), 816px" width="1920" height="1080" loading="lazy" decoding="async" alt="Original Finance pitch comparing general and personalized market briefs, with different introductions, indices, companies, and explanations.">
+            </a>
+            <figcaption>Original pitch / The introduction makes the reason for relevance visible. Market figures are illustrative.</figcaption>
+            <a class="case-image-link" href="/assets/discover-pitch-relevance.png" target="_blank" rel="noopener noreferrer">View full-size pitch slide<span class="sr-only"> (opens in a new tab)</span></a>
+          </figure>
+          <p>The introduction has a product role: it connects Copilot’s understanding of the user to the content being recommended. This is where the experience needs to make its reason for relevance understandable.</p>
           <figure class="discover-motion-figure">
             <video class="discover-motion-video" controls playsinline muted preload="none" poster="/assets/discover-market-brief-poster.jpg" width="3456" height="2168" aria-label="Mobile market-brief views, general and personalized, showing index summaries, charts, and context">
               <source src="/assets/discover-market-brief-motion.mp4" type="video/mp4">
@@ -137,25 +145,13 @@
             <a class="discover-motion-source" href="/assets/discover-market-brief-motion.mp4">Open market-brief video in browser</a>
             <figcaption>Mobile market brief: a short silent recording of general and personalized views, with index summaries, charts, and explanatory context. Figures are illustrative, not live data.</figcaption>
           </figure>
-          <p>Separating the event, its explanation, and its relevance helps readers follow fast-moving financial information. The aim is to help people understand a development without telling them what financial decision to make.</p>
-        </section>
-
-        <section id="directions" class="story-section">
-          <p class="eyebrow">03 / Relevance across the experience</p>
-          <h2>Personal relevance depends on context and timing.</h2>
-          <p>The design used a personalized introduction and separate views for market context and company events to show their relevance to the reader. The broader direction also considered Discover memory, explicit curation, and query analysis as possible ways to select relevant content. Because financial events change quickly, each view needed to explain why a development mattered now and avoid repeating details from other views.</p>
-          <dl class="format-directions">
-            <div><dt>Feed</dt><dd>Introduce the event and why it matters, using a clear hierarchy so readers can scan for the main point.</dd></div>
-            <div><dt>Detail</dt><dd>Expand on the event and its context, adding to what readers saw in the feed.</dd></div>
-            <div><dt>Connected dashboard</dt><dd>In the broader design direction, connect individual updates to the wider financial picture so each view adds context instead of repeating another.</dd></div>
-          </dl>
-          <p>I drew on the clarity, scan-friendly hierarchy, and restraint of Bloomberg-style financial reporting. I used those qualities as a reference for helping readers stay oriented and confident, without copying the format.</p>
         </section>
 
         <section id="mobile-cards" class="story-section">
-          <p class="eyebrow">04 / Mobile views preserve the story</p>
-          <h2>Keep the same information logic at a smaller scale.</h2>
-          <p>In the layout review, I compared two independent choices: grouping market and company updates together or separating them in the introduction, and combining stock updates in one card or giving each its own card. The four combinations show the trade-offs. One introductory group reads as a continuous update; two distinguish market context from company news. A combined card keeps companies together, while separate cards give each company a clear boundary so readers can scan one at a time.</p>
+          <p class="eyebrow">03 / Define the content unit</p>
+          <h2>Should mobile keep one stock per card?</h2>
+          <p>My second decision was whether mobile should keep the same stock-card structure as the web experience. I separated the exploration into two choices: one or two introductory groups, and combined or separate stock cards.</p>
+          <p>Intro grouping determines whether market context and company updates share one opening. Card grouping determines whether readers encounter a continuous briefing or individual company updates. Comparing the two separately made the trade-off clearer.</p>
           <div class="discover-layout-exploration" role="group" aria-label="Four mobile card-layout variants">
             <dl class="discover-layout-axes">
               <dt>Intro grouping</dt><dd>One group or two</dd>
@@ -185,7 +181,8 @@
             <a href="/assets/discover-mobile-card-layout-exploration.png">View full four-variant comparison</a>
             <a href="https://www.figma.com/design/9VgXijoGldIkSpa2AFxb0D/Feb.-10-One-Group-Design?node-id=2244-102675&amp;m=dev" target="_blank" rel="noopener noreferrer" aria-label="View source in Figma, opens in a new tab"><span>View source in Figma</span><span class="sr-only">Opens in a new tab</span></a>
           </div>
-          <p>For the delivered design, I kept one card per stock to fit the existing feed framework, where each card represents one content item. On mobile, I removed nonessential titles and shortened descriptions to fit that structure.</p>
+          <p>I kept one card per stock to fit the existing feed framework, where each card represents one content item. On mobile, I removed nonessential titles and shortened descriptions to fit that structure.</p>
+          <p>The trade-off is between a continuous multi-stock briefing and a clear boundary around each company update. The shared introduction provides the connection; each card carries the company, price movement, event explanation, and sources needed to make sense on its own.</p>
           <figure class="discover-motion-figure">
             <video class="discover-motion-video" controls playsinline muted preload="none" poster="/assets/discover-stock-update-poster.jpg" width="3680" height="2392" aria-label="Mobile stock-update cards showing company, price movement, event explanations, and sources">
               <source src="/assets/discover-stock-update-motion.mp4" type="video/mp4">
@@ -195,14 +192,30 @@
           </figure>
         </section>
 
-        <section id="delivery" class="story-section outcome-section">
-          <p class="eyebrow">05 / Delivery and takeaway</p>
-          <h2>A shipped insight card and a delivered feed design.</h2>
-          <dl class="delivery-status">
-            <div><dt>Shipped</dt><dd>I designed and shipped a Finance insight card that presents personalized financial highlights in Discover.</dd></div>
-            <div><dt>Delivered design</dt><dd>I delivered the final desktop and mobile Finance feed design shown above. This confirms design delivery, not launch of the complete Finance feed.</dd></div>
+        <section id="directions" class="story-section">
+          <p class="eyebrow">04 / Give depth a purpose</p>
+          <h2>Each level should answer a different question.</h2>
+          <p>Once an update has earned attention, the next view needs to add context. The pitch called for credible market voices and videos that contribute information beyond the written brief, with a page that can be scanned before a deeper read.</p>
+          <dl class="format-directions">
+            <div><dt>Feed</dt><dd>What deserves my attention? Connect a meaningful event to the reader’s interests, with enough explanation to judge whether to open it.</dd></div>
+            <div><dt>Market view</dt><dd>What is happening around this event? Bring together the market summary, indices, drivers, sources, and complementary media.</dd></div>
+            <div><dt>Stock exploration</dt><dd>What would help me examine this company? Organize performance, peer comparisons, earnings, and fundamentals around progressively deeper questions.</dd></div>
           </dl>
-          <p>Both the shipped insight card and the delivered feed design addressed the same question: how can scattered financial signals become timely, understandable context without prescribing a financial decision?</p>
+          <figure class="discover-pitch-figure">
+            <a class="discover-pitch-image-link" href="/assets/discover-pitch-reading-depth.png" target="_blank" rel="noopener noreferrer" aria-label="View full-size pitch slide, opens in a new tab">
+              <img src="/assets/discover-pitch-reading-depth-1920.webp" srcset="/assets/discover-pitch-reading-depth-960.webp 960w, /assets/discover-pitch-reading-depth-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 64px), 816px" width="1920" height="1080" loading="lazy" decoding="async" alt="Original Finance pitch showing a market consumption page that pairs a contextual written summary with a finance video and source information.">
+            </a>
+            <figcaption>Original pitch / A market detail view pairs a written interpretation with complementary video. The slide sets out a scannable-first reading approach.</figcaption>
+            <a class="case-image-link" href="/assets/discover-pitch-reading-depth.png" target="_blank" rel="noopener noreferrer">View full-size pitch slide<span class="sr-only"> (opens in a new tab)</span></a>
+          </figure>
+          <p>The Stock exploration extends this approach with questions about investor sentiment, forecasts, and fundamentals relative to peers. Charts sit within those questions, giving the reader a reason to examine each data view.</p>
+        </section>
+
+        <section id="delivery" class="story-section">
+          <p class="eyebrow">05 / What carries forward</p>
+          <h2>Relevance needs both an explanation and a structure.</h2>
+          <p>The two decisions are connected. The introduction explains why a module belongs in the user’s feed; the card structure determines how that relevance is carried across screens and reading contexts.</p>
+          <p>For other proactive content experiences, I would begin with the same questions: what makes this worth showing to this person now, what is the smallest content unit that still makes sense, and what new value does the next level of reading provide?</p>
         </section>
       </div>
     </div>
