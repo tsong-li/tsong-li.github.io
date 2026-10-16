@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Multilingual typography work by Tsong Li at Microsoft: Chinese font selection, page comparisons, collaboration with Windows, Office, and Edge, and font fallback guidance.">
+  <meta name="description" content="Typography expertise for MSN and Bing’s local design teams in China: multilingual font proposals, technical support, font fallback guidance, and internal pitches.">
   <title>Microsoft Chinese Typography: Tsong Li Portfolio</title>
   <script>
     (() => {
@@ -68,8 +68,8 @@
     }
   </style>
   <script src="/language-init.js"></script>
-  <link rel="stylesheet" href="/styles.css?v=chinese-typography-20261016">
-  <script src="/translations.js?v=chinese-typography-20261016" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=typography-expertise-20261016">
+  <script src="/translations.js?v=typography-expertise-20261016" defer></script>
   <script src="/app.js" defer></script>
 </head>
 <body class="case-page typography-case">
@@ -83,12 +83,12 @@
     <section class="case-hero" aria-labelledby="case-title">
       <div class="case-breadcrumb"><a class="case-return" href="/#chinese-typography"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">Microsoft · Internationalization</span></div>
       <h1 id="case-title">Localizing Microsoft’s typography for Chinese<span class="accent-text">.</span></h1>
-      <p class="case-principle">I developed multilingual typography proposals, coordinated Chinese font-switching plans across product teams, and helped designers work with language-specific font behavior.</p>
+      <p class="case-principle">As a typography specialist, I partnered with MSN and Bing’s local design teams in China to develop multilingual font proposals and provide technical guidance.</p>
       <dl class="case-facts" aria-label="At a glance">
         <div><dt>Context</dt><dd>Microsoft internationalization</dd></div>
-        <div><dt>My role</dt><dd>Typography design and font fallback guidance</dd></div>
-        <div><dt>Collaboration</dt><dd>Windows, Office, and Edge teams</dd></div>
-        <div><dt>Focus</dt><dd>Chinese font selection and multilingual design education</dd></div>
+        <div><dt>My role</dt><dd>Typography specialist · Font proposals and technical guidance</dd></div>
+        <div><dt>Collaboration</dt><dd>MSN and Bing design teams in China</dd></div>
+        <div><dt>Focus</dt><dd>Practical font solutions, fallback guidance, and internal pitches</dd></div>
       </dl>
     </section>
     <figure class="typography-visual typography-overview" id="design-overview"><picture><source type="image/webp" srcset="/assets/microsoft-chinese-typography-hero-800.webp 800w, /assets/microsoft-chinese-typography-hero-1600.webp 1600w, /assets/microsoft-chinese-typography-hero-2400.webp 2400w, /assets/microsoft-chinese-typography-hero-3840.webp 3840w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1264px) calc(100vw - 96px), 1168px"><img src="/assets/microsoft-chinese-typography-hero.png" width="3840" height="2160" loading="eager" decoding="async" alt="Orange typographic artwork combining the word Font with layered Chinese character strokes."></picture></figure>
@@ -100,8 +100,10 @@
           <a href="#diagnosis">01 / Understand the mismatch</a>
 <a href="#font-pairing">02 / Choose the pairing</a>
 <a href="#page-comparisons">03 / Compare in context</a>
-<a href="#font-switch">04 / Coordinate the switch</a>
-<a href="#team-guidance">05 / Share the principles</a>
+<a href="#font-fallback">04 / Explain font fallback</a>
+<a href="#language-details">05 / Check language details</a>
+<a href="#font-switch">06 / Coordinate the switch</a>
+<a href="#team-guidance">07 / Share the principles</a>
         </nav>
       </aside>
       <div class="story-sections">
@@ -109,16 +111,46 @@
           <p class="eyebrow">01 / Understand the mismatch</p>
           <h2 id="diagnosis-title">Matching numbers can produce very different type.</h2>
           <p>Chinese text in Discover Feeds needed to work alongside Ginto. Using the same size, weight, and line height across scripts could leave Chinese headings looking heavy, paragraphs crowded, and mixed text unevenly aligned.</p><p>I examined weight, apparent character size, line height, letter spacing, and baseline alignment. Comparisons of characters, phrases, and paragraphs helped turn those visual differences into specific design decisions.</p>
+<p>The original slides below come from the internal typography session I co-presented with Bingnan Jiang. I used these comparisons to explain the reasoning behind the proposals.</p>
+<h3>Read the shape inside the font size.</h3>
+<p>A font size describes the em, but the visible letterform occupies only part of that space. Latin x-height, capitals, and ascenders create a different rhythm from Chinese glyphs. I used these structural differences to explain why equal font sizes can still look mismatched.</p>
+<figure class="typography-evidence typography-slide">
+            <picture><source type="image/webp" srcset="/assets/microsoft-typography-script-metrics-960.webp 960w, /assets/microsoft-typography-script-metrics-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-script-metrics.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Original presentation slide comparing Latin cap height, x-height, ascenders, descenders, and baseline with the Chinese em-box."></picture>
+            <figcaption>Script structure / Latin metrics and the Chinese em-box.</figcaption>
+            <a class="case-image-link" href="/assets/microsoft-typography-script-metrics.png" target="_blank" rel="noopener noreferrer">View full-size slide <span class="sr-only">(opens in a new tab)</span></a>
+          </figure>
+<h3>Understand the available weight range.</h3>
+<p>The Microsoft YaHei version examined in the study offered Light, Regular, and Bold. Its available weights did not map neatly to Ginto’s finer weight range. That made weight availability a design constraint when balancing Chinese and Latin headlines.</p>
+<figure class="typography-evidence typography-slide">
+            <picture><source type="image/webp" srcset="/assets/microsoft-typography-weight-range-960.webp 960w, /assets/microsoft-typography-weight-range-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-weight-range.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Original slide comparing Ginto’s weight range with the Light, Regular, and Bold weights of Microsoft YaHei used in the study."></picture>
+            <figcaption>Weight range / The available YaHei weights alongside Ginto.</figcaption>
+            <a class="case-image-link" href="/assets/microsoft-typography-weight-range.png" target="_blank" rel="noopener noreferrer">View full-size slide <span class="sr-only">(opens in a new tab)</span></a>
+          </figure>
+
         </section>
 <section id="font-pairing" class="story-section" aria-labelledby="font-pairing-title">
           <p class="eyebrow">02 / Choose the pairing</p>
           <h2 id="font-pairing-title">Choose the font and its settings together.</h2>
           <p>I explored adjustments to Microsoft YaHei, then compared it with Noto Sans SC alongside Ginto. The study considered whether a broader choice of weights and different glyph proportions could produce a more balanced pairing.</p><p>The design proposal used Noto Sans SC and considered different spacing needs for interface labels, summaries, and body text. The aim was to support both quick scanning and longer reading.</p>
+<h3>Compare apparent size and baseline together.</h3>
+<p>I compared Microsoft YaHei and Noto Sans SC in the same Chinese–Latin samples. The overlaid glyphs made differences in proportion visible; the mixed-text lines showed how each font sat beside Ginto. These comparisons informed the proposed pairing.</p>
+<figure class="typography-evidence typography-slide">
+            <picture><source type="image/webp" srcset="/assets/microsoft-typography-glyph-size-960.webp 960w, /assets/microsoft-typography-glyph-size-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-glyph-size.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Original font-size slide showing overlaid Chinese glyphs and Ginto paired with Microsoft YaHei and Noto Sans SC."></picture>
+            <figcaption>Apparent size / YaHei and Noto Sans SC in the same comparison.</figcaption>
+            <a class="case-image-link" href="/assets/microsoft-typography-glyph-size.png" target="_blank" rel="noopener noreferrer">View full-size slide <span class="sr-only">(opens in a new tab)</span></a>
+          </figure>
+<figure class="typography-evidence typography-slide">
+            <picture><source type="image/webp" srcset="/assets/microsoft-typography-baseline-960.webp 960w, /assets/microsoft-typography-baseline-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-baseline.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Original baseline comparison of Ginto with Microsoft YaHei before the change and with Noto Sans SC in the proposal."></picture>
+            <figcaption>Mixed-script alignment / Compare how the two pairings sit on a line.</figcaption>
+            <a class="case-image-link" href="/assets/microsoft-typography-baseline.png" target="_blank" rel="noopener noreferrer">View full-size slide <span class="sr-only">(opens in a new tab)</span></a>
+          </figure>
+<p>I also treated line height and tracking as context-dependent decisions. A short interface label, a scannable summary, and an article paragraph have different reading demands, so the proposal considered each separately.</p>
+
         </section>
 <section id="page-comparisons" class="story-section" aria-labelledby="page-comparisons-title">
           <p class="eyebrow">03 / Compare in context</p>
           <h2 id="page-comparisons-title">See how the type works across a whole page.</h2>
-          <p>I brought the typography choices back into Discover Feeds and article layouts. The before-and-after designs show how the changes affect card headings, source labels, article titles, body text, and Chinese–Latin text within the same line.</p><figure class="typography-evidence">
+          <p>The typography proposals were illustrated in Discover Feeds and article layouts. The before-and-after designs show changes to card headings, source labels, article titles, body text, and Chinese–Latin text within the same line.</p><figure class="typography-evidence">
             <picture><source type="image/webp" srcset="/assets/microsoft-typography-feeds-before-960.webp 960w, /assets/microsoft-typography-feeds-before-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-feeds-before.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Discover Feeds before the typography adjustment, with heavier Chinese card headings."></picture>
             <figcaption>Discover Feeds / Before</figcaption>
             <a class="case-image-link" href="/assets/microsoft-typography-feeds-before.png" target="_blank" rel="noopener noreferrer">View full-size design image <span class="sr-only">(opens in a new tab)</span></a>
@@ -136,15 +168,50 @@
             <a class="case-image-link" href="/assets/microsoft-typography-article-after.png" target="_blank" rel="noopener noreferrer">View full-size design image <span class="sr-only">(opens in a new tab)</span></a>
           </figure>
         </section>
+<section id="font-fallback" class="story-section" aria-labelledby="font-fallback-title">
+<p class="eyebrow">04 / Explain font fallback</p>
+<h2 id="font-fallback-title">Trace the font behind each character.</h2>
+<p>A font stack can render one headline with several typefaces. When the first font lacks a character, the browser looks for a fallback that can draw it. I broke a mixed Chinese–Latin headline down character by character to show which font was actually used.</p>
+<p>In the configuration shown in the sharing deck, a requested weight of 550 produced Ginto at 550 and static Noto Sans SC at 600. The shared number in the style rule did not guarantee a shared visual weight.</p>
+<figure class="typography-evidence typography-slide">
+            <picture><source type="image/webp" srcset="/assets/microsoft-typography-fallback-960.webp 960w, /assets/microsoft-typography-fallback-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-fallback.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Original font-fallback slide connecting a font stack and requested weight of 550 to Ginto at 550 and static Noto Sans SC at 600 in the demonstrated configuration."></picture>
+            <figcaption>Font fallback / Follow the requested weight through to the rendered glyphs.</figcaption>
+            <a class="case-image-link" href="/assets/microsoft-typography-fallback.png" target="_blank" rel="noopener noreferrer">View full-size slide <span class="sr-only">(opens in a new tab)</span></a>
+          </figure>
+<h3>Pair weights by how they read together.</h3>
+<p>The teaching example then compared Ginto at 460 with Noto Sans SC at 500. I used the pairing to make a practical point: inspect the rendered result and the weights each font provides, then tune the relationship between scripts. Those values describe this example, rather than a universal setting for every interface.</p>
+<figure class="typography-evidence typography-slide">
+            <picture><source type="image/webp" srcset="/assets/microsoft-typography-weight-pairing-960.webp 960w, /assets/microsoft-typography-weight-pairing-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-weight-pairing.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Original sharing slide showing a mixed-language headline paired with Ginto at 460 and static Noto Sans SC at 500."></picture>
+            <figcaption>Weight pairing / Ginto 460 and Noto Sans SC 500 in the teaching example.</figcaption>
+            <a class="case-image-link" href="/assets/microsoft-typography-weight-pairing.png" target="_blank" rel="noopener noreferrer">View full-size slide <span class="sr-only">(opens in a new tab)</span></a>
+          </figure>
+</section>
+<section id="language-details" class="story-section" aria-labelledby="language-details-title">
+<p class="eyebrow">05 / Check language details</p>
+<h2 id="language-details-title">Make room for each writing system.</h2>
+<p>I extended the sharing beyond Chinese to show what can happen when a font change reaches other scripts. Thai and Telugu examples exposed lines touching or being cropped. They helped explain why teams need to inspect actual content after a font switch, including marks above and below the main letterforms.</p>
+<figure class="typography-evidence typography-slide">
+            <picture><source type="image/webp" srcset="/assets/microsoft-typography-line-height-960.webp 960w, /assets/microsoft-typography-line-height-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-line-height.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Original slide showing Thai and Telugu news cards with highlighted line-height problems after a font change."></picture>
+            <figcaption>Line height / Thai and Telugu examples from the multilingual sharing.</figcaption>
+            <a class="case-image-link" href="/assets/microsoft-typography-line-height.png" target="_blank" rel="noopener noreferrer">View full-size slide <span class="sr-only">(opens in a new tab)</span></a>
+          </figure>
+<h3>Use the glyph forms expected in each locale.</h3>
+<p>CJK characters can share a Unicode code point while using different regional glyph forms. I compared Noto Sans SC and Noto Sans JP with characters such as 骨, 直, and 画, then explained language-specific font stacks. Correct character coverage is only part of the decision; the selected font must also suit the content’s language.</p>
+<figure class="typography-evidence typography-slide">
+            <picture><source type="image/webp" srcset="/assets/microsoft-typography-locale-glyphs-960.webp 960w, /assets/microsoft-typography-locale-glyphs-1920.webp 1920w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 64px), (max-width: 1100px) calc(100vw - 300px), (max-width: 1264px) calc(100vw - 448px), 816px"><img src="/assets/microsoft-typography-locale-glyphs.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Original slide comparing the regional forms of 骨, 直, and 画 in Noto Sans SC and Noto Sans JP."></picture>
+            <figcaption>Regional glyphs / Noto Sans SC and Noto Sans JP at shared code points.</figcaption>
+            <a class="case-image-link" href="/assets/microsoft-typography-locale-glyphs.png" target="_blank" rel="noopener noreferrer">View full-size slide <span class="sr-only">(opens in a new tab)</span></a>
+          </figure>
+</section>
 <section id="font-switch" class="story-section" aria-labelledby="font-switch-title">
-          <p class="eyebrow">04 / Coordinate the switch</p>
-          <h2 id="font-switch-title">Connect the design proposal to the product teams.</h2>
-          <p>I developed the multilingual typography proposals and worked with the Windows, Office, and Edge teams on plans to switch Chinese-language experiences to Noto Sans CN, supplied with Windows 11 and Edge.</p><p>I also joined technical discussions with FounderType about updates to Microsoft YaHei’s font weights.</p>
+          <p class="eyebrow">06 / Coordinate the switch</p>
+          <h2 id="font-switch-title">Help product teams take the proposals toward release.</h2>
+          <p>I worked with MSN and Bing’s local design teams in China when they needed support with font updates. I developed multilingual font proposals they could implement and supported technical discussions and internal pitches.</p><p>I also worked with the Windows, Office, and Edge teams on Chinese font-switching plans using Noto Sans CN, supplied with Windows 11 and Edge.</p><p>I also joined technical discussions with FounderType about updates to Microsoft YaHei’s font weights.</p><p>I guided the teams as they moved the proposals toward release. Designers within each product team handled launch testing and the subsequent follow-up.</p>
         </section>
 <section id="team-guidance" class="story-section outcome-section" aria-labelledby="team-guidance-title">
-          <p class="eyebrow">05 / Share the principles</p>
+          <p class="eyebrow">07 / Share the principles</p>
           <h2 id="team-guidance-title">Give designers a way to reason about multilingual type.</h2>
-          <p>I shared multilingual typography principles with internal design teams and developed font fallback guidance. The sessions explained how writing systems differ, how browsers choose fonts for individual characters, and why the same weight value can look different across fonts.</p><p>The guidance also addressed regional CJK glyph forms and language-specific font choices. It gave teams concrete comparisons to use when evaluating typography in their own interfaces.</p>
+          <p>I shared multilingual typography principles with internal design teams and developed font fallback guidance. The material explained differences between writing systems, how browsers choose fonts for individual characters, and why the same weight value can look different across fonts.</p><p>The guidance also addressed regional CJK glyph forms and language-specific font choices. It gave teams concrete comparisons to use when evaluating typography in their own interfaces.</p>
         </section>
       </div>
     </div>

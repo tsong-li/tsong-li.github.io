@@ -165,6 +165,7 @@ button { color: var(--cp-text); }
 .wesee-overview, .light-studio-overview { max-width: 100%; margin: 36px 0 0; }
 .wesee-overview picture, .light-studio-overview picture { display: block; width: 100%; max-width: 100%; }
 .wesee-overview img, .light-studio-overview img { display: block; width: 100%; max-width: 100%; height: auto; border: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+.wesee-overview img { border-top: 0; }
 .project-screenshot > img { display: block; width: 100%; max-width: 100%; height: auto; border: 1px solid var(--cp-border); }
 .daily-listening-figure, .daily-player-figure, .daily-adaptation-figure { max-width: 100%; }
 .daily-listening-figure, .daily-adaptation-figure { margin: 32px 0 0; }
@@ -666,3 +667,6 @@ figcaption { color: var(--cp-secondary); font-size: 11px; line-height: 1.6; marg
 .typography-overview { margin-top: 36px; }
 .typography-evidence { margin-top: 32px; }
 .typography-evidence figcaption { color: var(--cp-text-muted); font-size: 12px; line-height: 1.7; margin-top: 12px; }
+
+.typography-case .story-section h3 { margin: 36px 0 16px; font-size: clamp(20px, 2.2vw, 25px); line-height: 1.35; letter-spacing: -.025em; font-weight: 600; }
+.typography-case .typography-evidence + p { margin-top: 28px; }
