@@ -68,7 +68,7 @@
       if (registeredText.has(node)) return;
       const parent = node.parentElement;
       const key = normalize(node.nodeValue);
-      if (!key || parent?.closest("script, style, template, .language-copy, .wordmark-dot, .resume-copy, .language-switch")) return;
+      if (!key || parent?.closest("script, style, template, noscript, .language-copy, .wordmark-dot, .resume-copy, .language-switch")) return;
       registeredText.add(node);
       added.push({ node, original: node.nodeValue, key });
     };
