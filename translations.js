@@ -950,3 +950,39 @@ window.portfolioTranslationInvariants = [
   "LinkedIn", "tsonglee@qq.com", "Aa", "EN", "DE", "JA", "0.5u", "1u",
   "Create a workspace", "Arbeitsbereich", "erstellen", "ワークスペースを作成"
 ];
+
+// Additional Tencent projects.
+Object.assign(window.portfolioTranslations, {
+  "My other work at Tencent includes interaction design for maps and TAIQ smart figurines, organizing a year-long HCI course, and building MXD’s website and WeChat channels.": "我在腾讯的其他工作包括地图与游戏智能手办的交互设计、为期一年的 HCI 课程组织，以及 MXD 部门官网、微信公众号和视频号建设。",
+  "Other Projects": "其他腾讯项目",
+  "Mobility, smart devices & design community": "出行、智能硬件与设计团队建设",
+  "From product experiences to design education and department communications.": "从产品体验，到设计教育与部门品牌建设。",
+  "Interaction design · Course organization · Department brand development": "交互设计 · 课程组织 · 部门品牌建设",
+  "Read the Other Projects at Tencent case study": "阅读其他腾讯项目案例",
+  "Selected projects": "项目选集",
+  "12 case studies across four directions": "四个方向，12 个完整案例",
+  "Other projects by Tsong Li at Tencent: Maps and connected devices, TAIQ smart figurines, a year-long HCI course, and MXD’s website and WeChat channels.": "Tsong Li 在腾讯的其他项目：腾讯地图与车载设备、TAIQ 游戏智能手办、为期一年的 HCI 课程，以及 MXD 部门官网与微信平台建设。",
+  "Other Projects at Tencent: Tsong Li Portfolio": "其他腾讯项目：Tsong Li 设计作品集",
+  "Maps, smart devices, design education, and department communications": "地图、智能硬件、设计教育与部门品牌",
+  "Interaction design, course coordination, and brand development": "交互设计、课程统筹与品牌建设",
+  "Tencent · Other projects": "腾讯 · 其他项目",
+  "01 / Tencent Maps": "01 / 腾讯地图",
+  "02 / TAIQ smart figurines": "02 / 游戏智能手办",
+  "03 / HCI course": "03 / HCI 课程组织",
+  "04 / Department website & WeChat": "04 / 部门官网与公众号",
+  "Tencent Maps & InteliRide": "腾讯地图与车载体验",
+  "I was responsible for software experience design for Tencent Maps and InteliRide. Working with the team on two in-car devices, I designed interactions around drivers’ habits and needs, covering vehicle maintenance, fuel use, fault detection, and advanced driver assistance (ADAS).": "我负责腾讯地图及相关车载产品的软件体验设计，配合团队开发两款车载设备。围绕用户的驾驶习惯与需求，设计车辆养护、油耗管理、故障检测及辅助驾驶（ADAS）等场景下的交互体验。",
+  "Tencent Maps and connected driving devices, with mobile interfaces, hardware concepts, and project documentation.": "腾讯地图与车载设备项目概览，包含手机界面、硬件方案及项目资料。",
+  "TAIQ smart figurines": "游戏智能手办 TAIQ",
+  "For Tencent’s TAIQ smart speaker project, I designed the interaction between the mobile app and the device, with a focus on connectivity and the automatic generation and editing of Honor of Kings highlight videos.": "在腾讯 TAIQ 智能音箱项目中，我负责手机 App 与智能手办之间的交互设计，重点关注设备连接，以及《王者荣耀》精彩片段的智能生成与自动剪辑体验。",
+  "I also took part in the in-car voice collaboration with Neusoft, exhibition planning, advertising shoots, and factory visits, contributing across software, hardware, and product promotion.": "此外，我还参与了与东软合作的车载语音项目、展会组织、广告拍摄和工厂考察，将设计工作延伸到软硬件协作与产品推广的不同环节。",
+  "TAIQ smart figurines, app and device experiences, and photographs from production and promotional activities.": "TAIQ 游戏智能手办、App 与设备体验，以及制作和推广活动照片。",
+  "A year-long HCI course": "为期一年的 HCI 专业课程",
+  "I organized a 12-month HCI course at Tencent, inviting Dr. Kim Jin-Soo, an HCI specialist and former CEO of Yahoo Korea, to teach the program. My work included coordinating the translation of Korean course materials, supporting curriculum design, running the sessions, and providing online support throughout the year.": "我在腾讯组织了为期 12 个月的 HCI 专业课程，邀请人机交互博士、前雅虎韩国 CEO Kim Jin-Soo 授课。负责协调韩文教材翻译、协助课程设计，并统筹现场组织、课程运营和线上支持。",
+  "Tencent’s year-long HCI course, showing lectures, course materials, workshops, and participants.": "腾讯为期一年的 HCI 课程，展示授课现场、课程资料、工作坊与学员。",
+  "MXD website & WeChat channels": "MXD 部门官网与微信内容平台",
+  "I initiated and led MXD’s brand-building work, creating the department’s website, WeChat official account, and video channel from the ground up. I managed the teams responsible for the website and official account across Beijing, Chengdu, and Shenzhen.": "我发起并主导腾讯 MXD 的部门品牌建设，从零搭建官网、微信公众号和视频号，统筹北京、成都、深圳三地的官网与公众号运营团队。",
+  "I also coordinated the annual showreel, from scripting and footage review to the final edit review, and organized its promotion and publication on WeChat’s video platforms.": "同时，我协调年度 Showreel 的脚本策划、素材审核与成片审核，并组织品牌推广及微信视频平台的内容发布。",
+  "Tencent MXD’s department website, WeChat official account, and annual showreel publication.": "腾讯 MXD 部门官网、微信公众号与年度 Showreel 发布页面。",
+  "Next case / Other Projects": "下一个案例 / 其他腾讯项目"
+});

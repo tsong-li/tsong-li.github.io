@@ -158,9 +158,9 @@ button { color: var(--cp-text); }
 .tax-cti-overview { margin: 36px 0 0; }
 .tax-cti-stage-figure { margin: 32px 0; }
 .tax-cti-stage-figure h3 { font-size: 22px; line-height: 1.35; margin-bottom: 16px; }
-.lark-evidence-figure { max-width: 100%; margin: 32px 0 0; }
-.lark-evidence-figure picture { display: block; width: 100%; max-width: 100%; }
-.lark-evidence-figure img { display: block; width: 100%; max-width: 100%; height: auto; border: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
+.lark-evidence-figure, .tencent-project-image { max-width: 100%; margin: 32px 0 0; }
+.lark-evidence-figure picture, .tencent-project-image picture { display: block; width: 100%; max-width: 100%; }
+.lark-evidence-figure img, .tencent-project-image img { display: block; width: 100%; max-width: 100%; height: auto; border: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
 .lark-evidence-figure figcaption { color: var(--cp-text-muted); font-size: 12px; line-height: 1.7; margin-top: 12px; }
 .wesee-overview, .light-studio-overview { max-width: 100%; margin: 36px 0 0; }
 .wesee-overview picture, .light-studio-overview picture { display: block; width: 100%; max-width: 100%; }
