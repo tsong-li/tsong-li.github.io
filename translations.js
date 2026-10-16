@@ -877,6 +877,7 @@ Object.assign(window.portfolioTranslations, {
   "An approachable first action let people finish a simple edit, while a more precise set of tools remained available when they needed it.": "容易上手的操作让用户可以完成简单剪辑；需要进一步调整时，也有更精细的工具可用。",
   "Wesee editing framework schematic: level one for core publishing, level two for text, stickers, and effects, and level three for timeline and fade controls, using recurring home, selection, and track panels.": "微视剪辑框架示意：第一层为基础发布，第二层为文字、贴纸和特效，第三层为时间线与淡入淡出；复用首页、选择与轨道面板。",
   "Light Studio / Tencent Effect: Tsong Li Portfolio - V1": "Light Studio / Tencent Effect：Tsong Li 设计作品集",
+  "Light Studio / Tencent Effect design overview showing an effects workspace with an object hierarchy, scene preview, resource library, and multitrack timeline.": "Light Studio / Tencent Effect 设计概览，展示特效制作工作区中的对象层级、场景预览、资源库与多轨时间线。",
   "Creative-production tool": "创作生产工具",
   "Light Studio / Tencent Effect: make technical setup feel like creative work": "Light Studio / Tencent Effect：让技术配置回到创作的语境",
   "Organize a complex effect-production workflow around the way creative teams build, adjust, and preview their work.": "根据创作团队搭建、调整和预览作品的方式，组织复杂的特效制作流程。",
