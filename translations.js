@@ -1087,3 +1087,8 @@ Object.assign(window.portfolioTranslations, {
   "07 / Share the principles": "07 / 沉淀知识与回退方案",
   "13 case studies across four directions": "四个方向，13 个完整案例"
 });
+
+// Shared internationalization practice across the adjacent cases.
+Object.assign(window.portfolioTranslations, {
+  "Across Microsoft and Lark, I translated language-specific design challenges into practical standards, font strategies, and guidance teams could reuse.": "在微软和 Lark 的国际化工作中，我将不同语言带来的设计问题，转化为可落地的规范、字体方案与团队可复用的指导。"
+});
