@@ -68,9 +68,10 @@
     }
   </style>
   <script src="/language-init.js"></script>
-  <link rel="stylesheet" href="/styles.css?v=typography-expertise-20261016b">
-  <script src="/translations.js?v=typography-expertise-20261016b" defer></script>
-  <script src="/app.js" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=visitor-access-20261016">
+  <script src="/translations.js?v=visitor-access-20261016" defer></script>
+  <script src="/access.js?v=visitor-access-20261016" defer></script>
+  <script src="/app.js?v=visitor-access-20261016" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -97,7 +98,17 @@
       </div>
     </section>
 
-    <section id="work" aria-labelledby="work-heading">
+    <section id="work" class="access-panel" data-access-shell aria-labelledby="access-heading">
+      <h2 id="access-heading">Selected work</h2>
+      <p>Enter the password to view my selected work and case studies.</p>
+      <div class="access-actions">
+        <button class="access-primary" type="button" data-unlock-work>View selected work</button>
+        <a class="access-contact" href="/#contact">Contact me for access</a>
+      </div>
+      <noscript><p class="access-noscript">Enable JavaScript to enter the password.</p></noscript>
+    </section>
+    <template id="protected-work" data-access-kind="home">
+<section id="work-content" aria-labelledby="work-heading">
       <div class="section-heading">
         <h2 id="work-heading">Selected work <span class="section-context">/ Five work directions</span></h2>
         <span class="section-context">13 case studies across five directions</span>
@@ -336,6 +347,7 @@
         </section>
       </section>
     </section>
+    </template>
 
     <section id="approach" class="approach-section" aria-labelledby="approach-heading">
       <div class="section-heading"><h2 id="approach-heading">Approach</h2><span class="section-context">From ambiguity to something useful</span></div>

@@ -2,7 +2,11 @@
   const translations = window.portfolioTranslations;
   const normalize = (value) => value.replace(/\s+/g, " ").trim();
   const records = [];
+  const registeredText = new WeakSet();
+  const registeredAttributes = new WeakMap();
+  const reportedMissing = new Set();
   let language = "en";
+  let languageApplied = false;
   const controls = document.createElement("div");
   controls.className = "language-switch";
   controls.setAttribute("role", "group");
@@ -56,7 +60,51 @@
 
   const text = (english) => language === "zh" ? translations[english] || english : english;
 
+  function registerContent(root = document) {
+    // A fragment is empty after its children have been mounted into the document.
+    if (root.nodeType === Node.DOCUMENT_FRAGMENT_NODE && !root.hasChildNodes()) root = document;
+    const added = [];
+    const registerText = (node) => {
+      if (registeredText.has(node)) return;
+      const parent = node.parentElement;
+      const key = normalize(node.nodeValue);
+      if (!key || parent?.closest("script, style, template, .language-copy, .wordmark-dot, .resume-copy, .language-switch")) return;
+      registeredText.add(node);
+      added.push({ node, original: node.nodeValue, key });
+    };
+    if (root.nodeType === Node.TEXT_NODE) registerText(root);
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) registerText(walker.currentNode);
+
+    const selector = "[aria-label], [alt], [title], meta[name=description]";
+    const elements = Array.from(root.querySelectorAll?.(selector) || []);
+    if (root.nodeType === Node.ELEMENT_NODE && root.matches(selector)) elements.unshift(root);
+    elements.forEach((node) => {
+      if (node.closest("template, .resume-copy, .language-switch")) return;
+      let attributes = registeredAttributes.get(node);
+      if (!attributes) {
+        attributes = new Set();
+        registeredAttributes.set(node, attributes);
+      }
+      ["aria-label", "alt", "title", "content"].forEach((attribute) => {
+        if (attributes.has(attribute) || (attribute === "content" && !node.matches("meta[name=description]"))) return;
+        const original = node.getAttribute(attribute);
+        if (!original) return;
+        attributes.add(attribute);
+        added.push({ node, attribute, original, key: normalize(original) });
+      });
+    });
+    records.push(...added);
+
+    const invariants = new Set(window.portfolioTranslationInvariants);
+    const missing = [...new Set(added.map(({ key }) => key))].filter((key) =>
+      /[A-Za-z]/.test(key) && !Object.hasOwn(translations, key) && !invariants.has(key) && !reportedMissing.has(key));
+    missing.forEach((key) => reportedMissing.add(key));
+    if (missing.length) console.error("Missing portfolio translations:", missing);
+  }
+
   function applyLanguage(value, keepPosition = false) {
+    const languageChanged = !languageApplied || value !== language;
     const landmarks = Array.from(document.querySelectorAll("main section, .featured-project"));
     const landmark = keepPosition ? landmarks.findLast((element) => {
       const rect = element.getBoundingClientRect();
@@ -84,29 +132,25 @@
     if (landmark) {
       window.scrollTo({ top: window.scrollY + landmark.getBoundingClientRect().top - previousTop, behavior: "instant" });
     }
+    languageApplied = true;
+    if (languageChanged) {
+      window.dispatchEvent(new CustomEvent("portfolio-language-changed", { detail: { language } }));
+    }
   }
 
-  if (translations && typeof translations === "object") {
-    const walker = document.createTreeWalker(document.documentElement, NodeFilter.SHOW_TEXT);
-    while (walker.nextNode()) {
-      const node = walker.currentNode;
-      const parent = node.parentElement;
-      const key = normalize(node.nodeValue);
-      if (!key || parent.closest("script, style, .language-copy, .wordmark-dot, .resume-copy")) continue;
-      records.push({ node, original: node.nodeValue, key });
+  window.portfolioI18n = {
+    refresh(root = document) {
+      if (translations && typeof translations === "object") {
+        registerContent(root);
+        applyLanguage(language);
+      } else {
+        updateLinks();
+      }
     }
-    document.querySelectorAll("[aria-label], [alt], [title], meta[name=description]").forEach((node) => {
-      if (node.closest(".resume-copy")) return;
-      ["aria-label", "alt", "title", "content"].forEach((attribute) => {
-        if (attribute === "content" && !node.matches("meta[name=description]")) return;
-        const original = node.getAttribute(attribute);
-        if (original) records.push({ node, attribute, original, key: normalize(original) });
-      });
-    });
-    const invariants = new Set(window.portfolioTranslationInvariants);
-    const missing = [...new Set(records.map(({ key }) => key))].filter((key) =>
-      /[A-Za-z]/.test(key) && !Object.hasOwn(translations, key) && !invariants.has(key));
-    if (missing.length) console.error("Missing portfolio translations:", missing);
+  };
+
+  if (translations && typeof translations === "object") {
+    registerContent();
     document.querySelector(".site-header nav").append(controls);
     buttons.forEach((button) => {
       button.addEventListener("click", () => {

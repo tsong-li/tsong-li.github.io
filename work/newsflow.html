@@ -68,9 +68,10 @@
     }
   </style>
   <script src="/language-init.js"></script>
-  <link rel="stylesheet" href="/styles.css">
-  <script src="/translations.js" defer></script>
-  <script src="/app.js" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=visitor-access-20261016">
+  <script src="/translations.js?v=visitor-access-20261016" defer></script>
+  <script src="/access.js?v=visitor-access-20261016" defer></script>
+  <script src="/app.js?v=visitor-access-20261016" defer></script>
 </head>
 <body class="case-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -79,7 +80,19 @@
     <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#approach">Approach</a><a href="/#about">About</a><a href="/resume.html">Resume</a><a href="/#contact">Contact</a></nav>
   </header>
 
-  <main id="main" class="wrap">
+  <main id="main" class="wrap access-case" data-access-shell aria-labelledby="access-heading">
+    <h1 id="access-heading">Password required</h1>
+    <p>Enter the password to view my selected work and case studies.</p>
+    <div class="access-actions">
+      <button class="access-primary" type="button" data-unlock-work>View case study</button>
+      <a class="access-secondary" href="/resume.html">Resume</a>
+      <a class="access-contact" href="/#contact">Contact me for access</a>
+    </div>
+    <noscript><p class="access-noscript">Enable JavaScript to enter the password.</p></noscript>
+  </main>
+  <footer class="site-footer wrap" data-access-shell><span>Tsong Li</span><span>Portfolio</span><a href="/#contact">Contact</a></footer>
+  <template id="protected-work" data-access-kind="case">
+<main id="protected-main" class="wrap">
     <section class="case-hero" aria-labelledby="case-title">
       <div class="case-breadcrumb"><a class="case-return" href="/#copilot-content-finance"><span class="case-return-arrow" aria-hidden="true">←</span><span>Selected work</span></a><span class="index-label">Personal project · Multimodal news</span></div>
       <h1 id="case-title">Newsflow: news for the moment you have<span class="accent-text">.</span></h1>
@@ -190,5 +203,6 @@
     <div class="case-closing"><a class="text-link case-return" href="/#newsflow"><span class="case-return-arrow" aria-hidden="true">←</span><span>Back to selected work</span></a><a href="/work/discover-finance.html">Next case / Discover Finance</a></div>
   </main>
   <footer class="site-footer wrap"><span>Tsong Li <span class="footer-divider">/</span> Newsflow</span><span>Personal project · Local portfolio case</span><a href="#main">Back to top</a></footer>
+  </template>
 </body>
 </html>
