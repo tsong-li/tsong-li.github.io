@@ -844,6 +844,7 @@ Object.assign(window.portfolioTranslations, {
 Object.assign(window.portfolioTranslations, {
   "Wesee 7.0: Tsong Li Portfolio - V1": "微视7.0：Tsong Li 设计作品集",
   "Wesee 7.0 · Video publishing": "微视7.0 · 视频发布",
+  "Wesee 7.0 design overview showing video editing, music, text and effects tools, and WeChat video red-packet screens.": "微视7.0设计概览，展示视频剪辑、音乐、文字和特效工具，以及微信视频红包界面。",
   "Wesee 7.0: a video editor that opens up in stages": "微视7.0：让剪辑能力随任务逐层展开",
   "Keep everyday editing approachable, while giving creators a clear path to more precise control.": "让日常剪辑容易上手，也让需要精细调整的创作者找到合适的工具。",
   "Tencent Wesee 7.0": "腾讯微视7.0",

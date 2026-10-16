@@ -162,6 +162,9 @@ button { color: var(--cp-text); }
 .lark-evidence-figure picture { display: block; width: 100%; max-width: 100%; }
 .lark-evidence-figure img { display: block; width: 100%; max-width: 100%; height: auto; border: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
 .lark-evidence-figure figcaption { color: var(--cp-text-muted); font-size: 12px; line-height: 1.7; margin-top: 12px; }
+.wesee-overview { max-width: 100%; margin: 36px 0 0; }
+.wesee-overview picture { display: block; width: 100%; max-width: 100%; }
+.wesee-overview img { display: block; width: 100%; max-width: 100%; height: auto; border: 1px solid var(--cp-border); background: var(--cp-bg-elevated); }
 .project-screenshot > img { display: block; width: 100%; max-width: 100%; height: auto; border: 1px solid var(--cp-border); }
 .daily-listening-figure, .daily-player-figure, .daily-adaptation-figure { max-width: 100%; }
 .daily-listening-figure, .daily-adaptation-figure { margin: 32px 0 0; }
