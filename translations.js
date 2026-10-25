@@ -16,7 +16,7 @@ window.portfolioTranslations = {
   "Unlocking…": "正在解锁…",
   "Lock work": "锁定作品",
   "Portfolio": "作品集",
-  "Tsong Li Portfolio - V1": "Tsong Li 设计作品集 - V1",
+  "Tsong Li Portfolio": "Tsong Li 设计作品集",
   "Tsong Li | Resume": "李聪 | 个人简历",
   "Tsong Li's professional resume, including experience, expertise, education, and contact information.": "李聪的个人简历，包含工作经历、专业技能、教育背景与联系方式。",
   "Skip to content": "跳至正文",
@@ -335,7 +335,7 @@ window.portfolioTranslations = {
 };
 
 Object.assign(window.portfolioTranslations, {
-  "Think Deeper: Tsong Li Portfolio - V1": "Think Deeper：Tsong Li 设计作品集",
+  "Think Deeper: Tsong Li Portfolio": "Think Deeper：Tsong Li 设计作品集",
   "01 / AI interaction framework": "01 / AI 交互框架",
   "Think Deeper: keep the answer in view": "Think Deeper：让答案始终保持主位",
   "Keep high-level process explanations easy to review alongside the answer.": "让用户在阅读答案时，也能方便地查看概括性的过程说明。",
@@ -412,7 +412,7 @@ Object.assign(window.portfolioTranslations, {
   "Think Deeper side-pane design screenshot with a process explanation in a right-hand overlay and the answer blurred behind it.": "Think Deeper 侧栏覆盖设计截图：右侧覆盖面板呈现过程说明，后方的答案被模糊处理。",
   "Mobile Think Deeper design showing an answer with a See my thinking entry, an open process-explanation sheet with source details, and a scrolled sheet containing a comparison table.": "Think Deeper 移动端设计：答案中提供“查看我的思考”入口，打开的过程说明面板展示来源详情，向下滚动后可见对比表格。",
   "Mobile exploration: the answer includes an entry to a scrollable process explanation and comparison table.": "移动端探索：从答案中的入口打开可滚动的过程说明和对比表格。",
-  "Copilot Temporary Chat: Tsong Li Portfolio - V1": "Copilot 临时对话：Tsong Li 设计作品集",
+  "Copilot Temporary Chat: Tsong Li Portfolio": "Copilot 临时对话：Tsong Li 设计作品集",
   "Copilot core experience": "Copilot 核心体验",
   "Copilot Temporary Chat: make the mode clear": "Copilot 临时对话：让模式清晰可辨",
   "Temporary Chat should be easy to find and clear once it is active.": "临时对话既要容易找到，也要让启用状态清晰可辨。",
@@ -473,7 +473,7 @@ Object.assign(window.portfolioTranslations, {
   "Four prepared Promotion Card variants: English left-to-right and Arabic right-to-left layouts, each in light and dark appearance. Text alignment and overlapping report and document illustrations are composed for each reading direction.": "四种已准备的 Promotion Card 版本：英语从左至右、阿拉伯语从右至左，并各有浅色和深色呈现。文字对齐方式及相互叠放的报告与文档插图，均针对相应阅读方向分别编排。",
   "The four prepared variants cover English left-to-right and Arabic right-to-left layouts, each in light and dark appearances. Text alignment and the overlapping report and document illustrations follow each reading direction.": "四个已准备好的版本包括英语从左至右和阿拉伯语从右至左的布局，各有浅色、深色两种样式。文字对齐方式，以及报告与文档插图的叠放关系，都按各自的阅读方向编排。",
   "View full-size Promotion Card designs": "查看完整尺寸的 Promotion Card 设计",
-  "Copilot Deep Research: Tsong Li Portfolio - V1": "Copilot Deep Research：Tsong Li 设计作品集",
+  "Copilot Deep Research: Tsong Li Portfolio": "Copilot Deep Research：Tsong Li 设计作品集",
   "Copilot Deep Research: reports made easier to share": "Copilot Deep Research：让报告更容易理解与分享",
   "Four shipped enhancements to how research reports are presented and shared.": "四项已上线的报告体验改进，涵盖信息呈现与分享。",
   "Charts, the Copilot Web Report Card, web and mobile sharing, and the Promotion Card for launch": "报告图表、Copilot 网页端报告卡片、网页端与移动端分享，以及配合功能发布的 Promotion Card",
@@ -617,7 +617,7 @@ Object.assign(window.portfolioTranslations, {
   "I delivered the final desktop and mobile Finance feed design shown above. This confirms design delivery, not launch of the complete Finance feed.": "我交付了上图所示的桌面端与移动端财经信息流最终设计。这代表设计交付完成，不代表完整财经信息流已经上线。",
   "Both the shipped insight card and the delivered feed design addressed the same question: how can scattered financial signals become timely, understandable context without prescribing a financial decision?": "已上线的洞察卡片和已交付的信息流设计都在回答同一个问题：如何把分散的财经信息联系起来，帮助用户及时理解，同时不替他们做财务决策？",
   "How Tsong Li delivered the final desktop and mobile design for Copilot Discover Finance, alongside a separately shipped personalized Finance insight card.": "Tsong Li 交付了 Copilot Discover 财经体验的桌面端与移动端最终设计；个性化财经洞察卡片则已另行上线。",
-  "Copilot Personal Finance: Tsong Li Portfolio - V1": "Copilot Personal Finance：Tsong Li 设计作品集",
+  "Copilot Personal Finance: Tsong Li Portfolio": "Copilot Personal Finance：Tsong Li 设计作品集",
   "Complete prototype composition with a credit-card conversation, comparison cards, and a persistent details panel, beside a separate insurance design direction.": "完整原型构图：信用卡对话、对比卡片与常驻详情面板并列，旁边展示独立的保险设计方向。",
   "Prototype screens: credit-card exploration and a separate insurance design direction.": "原型画面：信用卡探索与独立的保险设计方向。",
   "Prototype views show the conversation and persistent card details alongside a separate insurance design direction. Example terms and figures are illustrative, not verified offers or live recommendations. The insurance design is an exploration, not a delivered design.": "原型画面展示了对话和始终可见的卡片详情，旁边是另一项保险设计探索。示例条款和数字仅用于说明原型，并非经核实的产品报价或实时推荐；保险部分仍属设计探索，并非交付成果。",
@@ -688,7 +688,7 @@ Object.assign(window.portfolioTranslations, {
 });
 
 Object.assign(window.portfolioTranslations, {
-  "Copilot Daily: Tsong Li Portfolio - V1": "Copilot Daily：Tsong Li 设计作品集",
+  "Copilot Daily: Tsong Li Portfolio": "Copilot Daily：Tsong Li 设计作品集",
   "Copilot Daily design work by Tsong Li on web playback cues, scrolling transcript subtitles, and responsive layouts. Reported after rollout: playback duration increased by 214% and first-chapter playback bounce decreased by 49%.": "Tsong Li 在 Copilot Daily 负责网页播放提示、滚动文字稿字幕和响应式布局。报告显示，上线后播放时长增加了 214%，第一章节的播放跳出率下降了 49%。",
   "Copilot Daily · Briefing design": "Copilot Daily · 简报体验设计",
   "Copilot Daily: make quiet playback clear": "Copilot Daily：让静音播放也清晰可察",
@@ -725,7 +725,7 @@ Object.assign(window.portfolioTranslations, {
   "View full-size design image": "查看完整尺寸设计图",
   "Copilot Daily listening-view design. The displayed date and sample copy are illustrative.": "Copilot Daily 收听界面设计。画面中的日期与示例文案仅用于展示。",
   "The supplied views show briefing text and audio controls together, with source labels in the desktop view and an AI fallibility notice on mobile. Keeping these cues beside the listening experience makes context and playback state easier to check. I also designed per-chapter transcript support, which shipped in Copilot Daily so people could read each chapter alongside the audio.": "提供的界面展示了简报文字与音频控制并列呈现，桌面端显示来源标签，移动端则显示 AI 可能出错的提示。将这些线索留在收听界面中，便于查看内容背景与播放状态。我还设计了按章节提供文字稿的功能，该功能已在 Copilot Daily 上线，让用户可以结合音频阅读每个章节。",
-  "Newsflow: Tsong Li Portfolio - V1": "Newsflow：Tsong Li 设计作品集",
+  "Newsflow: Tsong Li Portfolio": "Newsflow：Tsong Li 设计作品集",
   "Personal project": "个人项目",
   "AI-assisted product build": "AI 辅助产品构建",
   "Concept, design, AI-assisted build, integration, and deployment": "构思、设计、AI 辅助开发、服务接入与部署",
@@ -793,7 +793,7 @@ Object.assign(window.portfolioTranslations, {
 });
 
 Object.assign(window.portfolioTranslations, {
-  "Tax CTI: Tsong Li Portfolio - V1": "Tax CTI：Tsong Li 设计作品集",
+  "Tax CTI: Tsong Li Portfolio": "Tax CTI：Tsong Li 设计作品集",
   "Tax operations · 2026": "税务运营 · 2026",
   "Tax CTI: keep the workflow; make the prototype fit the system": "Tax CTI：保留验证过的流程，让原型真正对齐系统",
   "I used AI to prototype a complex tax workflow, then narrowed its scope and rebuilt it with feedback from finance and engineering.": "我用 AI 为复杂的税务流程搭建原型，再根据财务和工程团队的反馈缩小范围、重建方案。",
@@ -827,7 +827,7 @@ Object.assign(window.portfolioTranslations, {
   "Workflow schematic showing an exploratory tax-operations prototype, frontend feedback about unused Storybook components, and a rebuild using actual system components while preserving the validated flow.": "流程示意：税务运营探索原型经过前端评审，发现未使用 Storybook 组件，随后保留已验证流程，改用真实组件重建。",
   "Earlier work · ByteDance": "早期作品 · 字节跳动",
   "Earlier work · Tencent": "早期作品 · 腾讯",
-  "Lark internationalization: Tsong Li Portfolio - V1": "Lark 国际化：Tsong Li 设计作品集",
+  "Lark internationalization: Tsong Li Portfolio": "Lark 国际化：Tsong Li 设计作品集",
   "Lark: make internationalization part of everyday design delivery": "Lark：让国际化成为可持续的设计交付方式",
   "A multilingual experience depends on translation, layout, typography, platform behavior, and how teams hand off the work.": "多语言体验既取决于译文，也取决于布局、字体、平台表现和团队的交付方式。",
   "Lark collaboration suite": "Lark 协作套件",
@@ -859,7 +859,7 @@ Object.assign(window.portfolioTranslations, {
 });
 
 Object.assign(window.portfolioTranslations, {
-  "Wesee 7.0: Tsong Li Portfolio - V1": "微视7.0：Tsong Li 设计作品集",
+  "Wesee 7.0: Tsong Li Portfolio": "微视7.0：Tsong Li 设计作品集",
   "Wesee 7.0 · Video publishing": "微视7.0 · 视频发布",
   "Wesee 7.0 design overview showing video editing, music, text and effects tools, and WeChat video red-packet screens.": "微视7.0设计概览，展示视频剪辑、音乐、文字和特效工具，以及微信视频红包界面。",
   "Wesee 7.0: a video editor that opens up in stages": "微视7.0：让剪辑能力随任务逐层展开",
@@ -893,7 +893,7 @@ Object.assign(window.portfolioTranslations, {
   "For basic music selection, we replaced a hard-to-discover waveform gesture with a familiar progress bar. Timeline editing and fades remained available for more precise control, while lyric feedback helped users locate a passage as they adjusted a music segment.": "选择音乐片段时，我们把难以发现的波形手势改为熟悉的进度条操作。需要精细调整的用户仍可使用时间线和淡入淡出，歌词提示则帮助他们在调整片段时找到对应段落。",
   "An approachable first action let people finish a simple edit, while a more precise set of tools remained available when they needed it.": "容易上手的操作让用户可以完成简单剪辑；需要进一步调整时，也有更精细的工具可用。",
   "Wesee editing framework schematic: level one for core publishing, level two for text, stickers, and effects, and level three for timeline and fade controls, using recurring home, selection, and track panels.": "微视剪辑框架示意：第一层为基础发布，第二层为文字、贴纸和特效，第三层为时间线与淡入淡出；复用首页、选择与轨道面板。",
-  "Light Studio / Tencent Effect: Tsong Li Portfolio - V1": "Light Studio / Tencent Effect：Tsong Li 设计作品集",
+  "Light Studio / Tencent Effect: Tsong Li Portfolio": "Light Studio / Tencent Effect：Tsong Li 设计作品集",
   "Light Studio / Tencent Effect design overview showing an effects workspace with an object hierarchy, scene preview, resource library, and multitrack timeline.": "Light Studio / Tencent Effect 设计概览，展示特效制作工作区中的对象层级、场景预览、资源库与多轨时间线。",
   "Creative-production tool": "创作生产工具",
   "Light Studio / Tencent Effect: make technical setup feel like creative work": "Light Studio / Tencent Effect：让技术配置回到创作的语境",
