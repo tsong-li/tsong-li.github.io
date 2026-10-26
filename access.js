@@ -3,12 +3,19 @@
   // repository and asset URLs remain public. Keep the default HTML inert.
   const PASSWORD_DIGEST = "efd758702eea8915a72bf6b584f155ea2d24e0be030e8fd04ddcac2ab5309fdd";
   const SESSION_KEY = "portfolio-work-access-v1";
+  // First two cases on the homepage, public without a password. All other
+  // /work/ pages keep the existing password gate.
+  const PUBLIC_WORK_PATHS = new Set([
+    "/work/discover-finance.html",
+    "/work/personal-finance.html"
+  ]);
   const PUBLIC_HOME_IDS = new Set([
     "", "main", "hero-title", "approach", "approach-heading", "about",
     "about-heading", "contact", "contact-heading", "access-heading"
   ]);
   let unlocked = false;
   try { unlocked = sessionStorage.getItem(SESSION_KEY) === "unlocked"; } catch { /* Use this page's memory. */ }
+  if (PUBLIC_WORK_PATHS.has(location.pathname)) unlocked = true;
   let destination = null;
   let trigger = null;
   let attempt = 0;
@@ -47,8 +54,9 @@
   function isHome(path) { return path === "/" || path === "/index.html"; }
 
   function requiresAccess(url) {
-    return url.origin === location.origin &&
-      (url.pathname.startsWith("/work/") || (isHome(url.pathname) && !PUBLIC_HOME_IDS.has(fragment(url))));
+    if (url.origin !== location.origin) return false;
+    if (PUBLIC_WORK_PATHS.has(url.pathname)) return false;
+    return url.pathname.startsWith("/work/") || (isHome(url.pathname) && !PUBLIC_HOME_IDS.has(fragment(url)));
   }
 
   function samePage(url) {
@@ -80,6 +88,7 @@
         const work = content.querySelector("#work-content");
         work.id = "work";
         document.querySelector('[data-access-shell]').replaceWith(content);
+        document.querySelector("#public-work")?.remove();
       } else {
         content.querySelector("#protected-main").id = "main";
         document.querySelectorAll("[data-access-shell]").forEach((shell) => shell.remove());
@@ -88,7 +97,8 @@
       template.remove();
     }
     const footer = document.querySelector(".site-footer");
-    if (footer && !footer.querySelector("[data-lock-work]")) {
+    const sessionUnlocked = (() => { try { return sessionStorage.getItem(SESSION_KEY) === "unlocked"; } catch { return false; } })();
+    if (footer && !footer.querySelector("[data-lock-work]") && (sessionUnlocked || !PUBLIC_WORK_PATHS.has(location.pathname))) {
       const lock = document.createElement("button");
       lock.type = "button";
       lock.className = "access-lock";
@@ -96,6 +106,30 @@
       lock.textContent = "Lock work";
       footer.append(lock);
     }
+    window.portfolioI18n?.refresh();
+  }
+
+  function mountPublicWork() {
+    // Homepage only, locked visitors only: show the first two case cards
+    // from the protected template without a password. The rest stays gated.
+    if (unlocked || !isHome(location.pathname)) return;
+    if (document.querySelector("#public-work")) return;
+    const template = document.querySelector("#protected-work");
+    const shell = document.querySelector('[data-access-shell]');
+    if (!template || template.dataset.accessKind !== "home" || !shell) return;
+    const cards = template.content.querySelectorAll(".featured-project");
+    if (cards.length < 2) return;
+    const section = document.createElement("section");
+    section.id = "public-work";
+    section.setAttribute("aria-labelledby", "public-work-heading");
+    section.innerHTML = `<div class="section-heading">
+        <h2 id="public-work-heading">Selected work <span class="section-context">/ Public case studies</span></h2>
+        <span class="section-context">2 public case studies</span>
+      </div>`;
+    section.append(cards[0].cloneNode(true), cards[1].cloneNode(true));
+    shell.before(section);
+    const note = shell.querySelector("p");
+    if (note) note.textContent = "Two case studies above are public. Enter the password to view the remaining case studies.";
     window.portfolioI18n?.refresh();
   }
 
@@ -215,7 +249,10 @@
     } catch { /* Preserve the current document's memory fallback. */ }
   });
   if (unlocked) mountWork();
-  else document.documentElement.dataset.workAccess = "locked";
+  else {
+    document.documentElement.dataset.workAccess = "locked";
+    mountPublicWork();
+  }
   document.addEventListener("DOMContentLoaded", () => {
     if (unlocked && location.hash) moveTo(new URL(location.href));
     else checkLocation();
