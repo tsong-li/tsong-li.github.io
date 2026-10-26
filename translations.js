@@ -1178,7 +1178,7 @@ Object.assign(window.portfolioTranslations, {
   "With engineering and content teams, I set multilingual standards, translation-tool behavior, a handoff SOP and font-verification rules — solving the layout and typography problems that translation alone cannot fix.": "与研发、内容团队协同，制定多语言规范、翻译工具逻辑、交付 SOP 与字体校验规则，处理的正是翻译本身无法解决的版式与排版问题。",
   "Everyday editing should stay simple — and deeper control should be one step away, not one screen away.": "日常剪辑应当简单，深层控制也应近在手边，而非藏于深处。",
   "Leading the team, a three-level editing framework let creators go straight from text entry to timing controls, validated by task testing; music stayed familiar, while timeline and fade controls waited only when creators needed them.": "团队建立的三级编辑框架经任务验证：输入文字后，可直接调整显示时长；音乐选择沿用熟悉方式，时间轴与淡入淡出仅在创作者需要时出现。",
-  "Technical setup stops feeling technical when it is organized the way creators already think.": "技术配置若按创作者的思维方式组织，便不再显得生硬。",
+  "Technical setup stops feeling technical when it is organized the way creators already think.": "技术配置按创作者的思维方式组织，便显得顺理成章。",
   "For the Wesee ecosystem's effect-production workspace, familiar creative-tool regions and grouped technical relationships made setup legible, with selection recovery and phone preview closing the loop between editing and seeing the result.": "微视生态特效制作工具沿用创作者熟悉的分区与分组，使技术关系一目了然；选中状态恢复与手机预览，则将编辑与结果呈现连为一体。",
   "Design work that never ships in a product can still shape a team.": "未落入产品的设计工作，同样可以塑造团队。",
   "Beyond maps and TAIQ smart figurines, a year-long HCI course and MXD's website and WeChat presence turned individual practice into shared language — for the department, not just for a project.": "除地图与游戏智能手办的交互设计外，为期一年的 HCI 课程及 MXD 官网与微信公众号，将个人实践转化为部门共有的语言，受益者不止于单个项目。",
